@@ -67,8 +67,8 @@ recomputation runtime is the value~\citep{torchpartitioners,maczan2026knapsack}.
 The budget is defined in terms of saved-activation bytes, not peak memory, so nothing promises that peak memory falls
 with it; the partitioner's design note states that it ignores memory usage within each graph~\citep{he2022mincut}. Still, a user lowering the budget expects it to.
 
-\Cref{fig:curve} shows that it need not: for a 32-layer Llama-style model the measured peak \emph{rises} from 384\,MB at
-budget~0.15 to 904\,MB at budget~0.05 under Inductor (dashed gray).
+\Cref{fig:curve} shows that it need not: for a 32-layer Llama-style model the measured peak \emph{rises} from 363\,MB at
+budget~0.13, the lowest point of a dense grid of budgets, to 904\,MB at budget~0.05 under Inductor (dashed gray; the hollow markers are the dense grid).
 The author reported this as PyTorch issue \#197838~\citep{issue197838}, and another user has since reproduced a
 non-monotone curve on a GPT-style model on different hardware~\citep{lonewolf2026gist}.
 This report explains why it happens and evaluates ways to mitigate it.
@@ -206,7 +206,7 @@ because Inductor fuses and reschedules.
 When the backend executes the emitted graphs as written (\code{aot\_eager}), the same walk is accurate: $\rho=0.999$ with
 0.4\% median and 1.5\% maximum error over the 14 Llama plans; on BERT it is low by a near-constant 29--31\,MB, which
 preserves ranking. Our prototypes use this walk as their oracle, also under Inductor, so under Inductor they rely only
-on its near rank-correctness.
+on its near rank-correctness; \cref{sec:remat} checks this for the pass's own edits.
 
 Two quantities one might use instead do not track the peak (\code{aot\_eager}, 14 Llama plans). A ``closure'' metric (the
 number of unsaved candidate predecessors of each candidate, which we had earlier proposed on the issue) reaches only

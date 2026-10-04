@@ -23,6 +23,39 @@ prototype/                       self-contained use-site rematerialization pass,
 paper/                           LaTeX source, bibliography, and make_figures.py, which builds every figure and table from results/
 ```
 
+## Start here
+
+**Check that everything runs, on CPU (about 15 minutes, no GPU), after the [Setup](#setup) steps:**
+
+```bash
+python -m pytest -q prototype/test_use_site_remat.py                                          # 8 tests: the pass's invariants
+python experiments/liveness/liveness_oracle_check.py --suite selftest                           # static oracle: expect PASS
+CHECK_DEVICE=cpu CHECK_SCALE=1 python experiments/liveness/check_remat_bert.py               # gradients: expect CORRECT
+CHECK_NO_FIX=1 CHECK_DEVICE=cpu CHECK_SCALE=1 python experiments/liveness/check_remat_bert.py  # control: expect WRONG
+```
+
+**Reproduce a number in the paper:** find its table, figure or section in [What produced each result in the paper](#what-produced-each-result-in-the-paper). Each row gives the command and the raw file it wrote. The GPU rows need a CUDA GPU.
+
+**Which code is the paper's method.** Every other script is a measurement or a check.
+
+| Role | Files |
+|---|---|
+| Use-site rematerialization (the main method) | `experiments/liveness/remat_at_use.py` (the version that produced the paper's numbers); `prototype/use_site_remat.py` (the same pass, self-contained, with tests and a `torch.compile` hook; a test checks they make identical edits) |
+| Liveness-aware selection solver (secondary method) | `experiments/liveness/liveness_solver.py` |
+| Peak oracles | `liveness_oracle_check.py` (static walk of the emitted graphs), `experiment_c_inductor_runtime.py` (captures Inductor's `memory.py` estimate) |
+| Main GPU harnesses | `gpu_eval_remat.py` (Tables 2 and 4, Figures 1 and 4), `stock_grid.py` (dense stock grid), `seqlen_sweep.py` (Table 1), `remat_edit_validation.py` (per-edit check of the pass under Inductor) |
+| Correctness checks and RNG work | `check_*.py`, `bisect_solver_bert.py`, `repro_rng_*.py`, `rng_*.py`, `rand4x_switch.py` |
+| Negative result only (§5) | `liveness_solver_v2_hybrid.py`: a class-forcing variant of the solver that did not help. It is not part of the method. Its docstring starts with `liveness_solver.py` because it was run by copying it over that file. |
+| Related-work comparison only (§7) | `greedy_selector_race.py`, `greedy_race_analyze.py`, `greedy_race_verify.py` |
+| Superseded, kept for provenance | `gpu_eval_remat_v1.py`, `rng_fix_emulation_v1.py`, `liveness_solver_v1.py` (byte-identical backup), `eval_liveness_solver.py` (development test). See [Known caveats](#known-caveats-in-the-raw-results). |
+
+**Data provenance.**
+- **Authoritative:** the per-run JSON files in `experiments/liveness/results/`.
+- **Diagnostic:** the `*_log.txt` files. They carry the same numbers plus warnings and progress output.
+- **Superseded, not used by the paper:** `LOGGED_OUTPUT.md`, a transcription of terminal output made before the lost runs were rerun.
+- **Generated from the JSON:** every figure and table in the paper (`paper/figs/`), by `paper/make_figures.py`.
+- **Copied by hand:** numbers quoted in the text. Each one is in a JSON or log file named in the mapping table below.
+
 ## Setup
 
 ```bash
@@ -39,7 +72,7 @@ Run every command from the repository root. The GPU runs take from 30 minutes to
 | In the code | In the paper |
 |---|---|
 | `pointwise` mode of the remat pass | **light** mode: no matrix multiplies or attention |
-| `remat(all)` | **all-ops** mode |
+| `remat(all)` | **all-ops** mode: also matrix multiplies (never attention: SDPA ops carry the `nondeterministic_seeded` tag) |
 | `solver` | the liveness-aware selection solver, `LivenessAwareSolver` v1 (reprice only) |
 
 ## What produced each result in the paper
