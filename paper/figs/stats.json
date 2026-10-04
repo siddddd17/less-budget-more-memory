@@ -1,0 +1,46 @@
+{
+ "expa_static_walk_aot_eager": {
+  "n": 14,
+  "spearman": 0.9989,
+  "median_err": 0.0043,
+  "max_err": 0.0151
+ },
+ "expc_memory_py_inductor": {
+  "n": 14,
+  "spearman": 1.0,
+  "median_err": 0.0068,
+  "max_err": 0.0146
+ },
+ "expc_fx_walk_inductor": {
+  "n": 14,
+  "spearman": 0.9945,
+  "median_err": 0.1888,
+  "max_err": 0.3962
+ },
+ "expa_spearman_other": {
+  "closure_max": 0.559,
+  "closure_sum_w": 0.597,
+  "knapsack_evaluator_peak": -0.128,
+  "saved_weight": -0.619
+ },
+ "bert_memory_py_overprediction": [
+  0.111,
+  0.088,
+  0.079
+ ],
+ "bert_static_walk_offset_MB": [
+  29.1,
+  28.6,
+  30.7
+ ],
+ "best_stock_llama": {
+  "budget": 0.13,
+  "peak_MB": 363.3,
+  "step_ms": 776.5
+ },
+ "best_stock_bert": {
+  "budget": 0.05,
+  "peak_MB": 475.0,
+  "step_ms": 337.0
+ }
+}

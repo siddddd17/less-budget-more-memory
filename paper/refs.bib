@@ -1,0 +1,207 @@
+@article{chen2016sublinear,
+  title={Training Deep Nets with Sublinear Memory Cost},
+  author={Chen, Tianqi and Xu, Bing and Zhang, Chiyuan and Guestrin, Carlos},
+  journal={arXiv preprint arXiv:1604.06174},
+  year={2016}
+}
+@inproceedings{ansel2024pytorch2,
+  title={{PyTorch 2}: Faster Machine Learning Through Dynamic {Python} Bytecode Transformation and Graph Compilation},
+  author={Ansel, Jason and Yang, Edward and He, Horace and Gimelshein, Natalia and Jain, Animesh and Voznesensky, Michael and Bao, Bin and Bell, Peter and Berard, David and Burovski, Evgeni and others},
+  booktitle={Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2 (ASPLOS)},
+  doi={10.1145/3620665.3640366},
+  year={2024}
+}
+@misc{pytorchblog2025,
+  title={Current and New Activation Checkpointing Techniques in {PyTorch}},
+  author={{PyTorch Team}},
+  howpublished={\url{https://pytorch.org/blog/activation-checkpointing-techniques/}},
+  year={2025}
+}
+@article{maczan2026knapsack,
+  title={Memory-Efficient Activation Checkpointing with Sliding Window and {Hirschberg's} Algorithm for 0/1 Knapsack Solving in {PyTorch}},
+  author={Maczan, J{\k{e}}drzej},
+  journal={arXiv preprint arXiv:2608.08740},
+  year={2026}
+}
+@inproceedings{kumar2019efficient,
+  title={Efficient Rematerialization for Deep Networks},
+  author={Kumar, Ravi and Purohit, Manish and Svitkina, Zoya and Vee, Erik and Wang, Joshua R.},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2019}
+}
+@inproceedings{jain2020checkmate,
+  title={Checkmate: Breaking the Memory Wall with Optimal Tensor Rematerialization},
+  author={Jain, Paras and Jain, Ajay and Nrusimha, Aniruddha and Gholami, Amir and Abbeel, Pieter and Keutzer, Kurt and Stoica, Ion and Gonzalez, Joseph E.},
+  booktitle={Proceedings of Machine Learning and Systems (MLSys)},
+  year={2020}
+}
+@inproceedings{bartan2023moccasin,
+  title={Moccasin: Efficient Tensor Rematerialization for Neural Networks},
+  author={Bartan, Burak and Li, Haoming and Teague, Harris and Lott, Christopher and Dilkina, Bistra},
+  booktitle={International Conference on Machine Learning (ICML)},
+  year={2023}
+}
+@inproceedings{kirisame2021dtr,
+  title={Dynamic Tensor Rematerialization},
+  author={Kirisame, Marisa and Lyubomirsky, Steven and Haan, Altan and Brennan, Jennifer and He, Mike and Roesch, Jared and Chen, Tianqi and Tatlock, Zachary},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2021}
+}
+@inproceedings{shah2021monet,
+  title={Memory Optimization for Deep Networks},
+  author={Shah, Aashaka and Wu, Chao-Yuan and Mohan, Jayashree and Chidambaram, Vijay and Kr{\"a}henb{\"u}hl, Philipp},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2021}
+}
+@inproceedings{patil2022poet,
+  title={{POET}: Training Neural Networks on Tiny Devices with Integrated Rematerialization and Paging},
+  author={Patil, Shishir G. and Jain, Paras and Dutta, Prabal and Stoica, Ion and Gonzalez, Joseph E.},
+  booktitle={International Conference on Machine Learning (ICML)},
+  year={2022}
+}
+@inproceedings{zhao2023rockmate,
+  title={Rockmate: an Efficient, Fast, Automatic and Generic Tool for Re-materialization in {PyTorch}},
+  author={Zhao, Xunyi and Le Hellard, Th{\'e}otime and Eyraud-Dubois, Lionel and Gusak, Julia and Beaumont, Olivier},
+  booktitle={International Conference on Machine Learning (ICML)},
+  year={2023}
+}
+@inproceedings{zhang2023coop,
+  title={Coop: Memory is not a Commodity},
+  author={Zhang, Jianhao and Ma, Shihan and Liu, Peihong and Yuan, Jinhui},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2023}
+}
+@article{steiner2022olla,
+  title={{OLLA}: Optimizing the Lifetime and Location of Arrays to Reduce the Memory Usage of Neural Networks},
+  author={Steiner, Benoit and Elhoushi, Mostafa and Kahn, Jacob and Hegarty, James},
+  journal={arXiv preprint arXiv:2210.12924},
+  year={2022}
+}
+@article{shu2023roam,
+  title={{ROAM}: Memory-Efficient Large {DNN} Training via Optimized Operator Ordering and Memory Layout},
+  author={Shu, Huiyao and Wang, Ang and Shi, Ziji and Zhao, Hanyu and Li, Yong and Lu, Lu},
+  journal={arXiv preprint arXiv:2310.19295},
+  year={2023}
+}
+@article{pagadala2026regime,
+  title={Deterministic Regime Switching and Feasibility Inversion in Dynamic Tensor Rematerialization},
+  author={Pagadala, Mahesh Reddy},
+  journal={arXiv preprint arXiv:2609.31250},
+  year={2026}
+}
+@misc{issue197838,
+  title={activation\_memory\_budget: physical peak allocated memory is non-monotonic across budgets},
+  author={{PyTorch issue \#197838}},
+  howpublished={\url{https://github.com/pytorch/pytorch/issues/197838}},
+  year={2026}
+}
+@misc{issue190758,
+  title={Memory-budget partitioner recomputes {RNG} ops with fresh randomness in backward, silently corrupting gradients at any activation\_memory\_budget $<$ 1.0},
+  author={{PyTorch issue \#190758}},
+  howpublished={\url{https://github.com/pytorch/pytorch/issues/190758}},
+  year={2026}
+}
+@misc{issue198333,
+  title={Since 2.13, inductor's 4x random path corrupts {CUDA} dropout masks},
+  author={{PyTorch issue \#198333}},
+  howpublished={\url{https://github.com/pytorch/pytorch/issues/198333}},
+  year={2026}
+}
+@misc{pr190759,
+  title={Save forward {RNG} outputs when the memory-budget partitioner forces recompute ({PyTorch} draft pull request \#190759)},
+  author={Nizamani, Hussain},
+  howpublished={\url{https://github.com/pytorch/pytorch/pull/190759}},
+  year={2026}
+}
+@misc{pr191684,
+  title={[{AOTAutograd}] Replay {RNG} state for memory-budget rematerialization ({PyTorch} draft pull request \#191684)},
+  author={{soulitzer}},
+  howpublished={\url{https://github.com/pytorch/pytorch/pull/191684}},
+  year={2026}
+}
+@misc{issue149258,
+  title={Auto-selective activation checkpointing is not optimal for speed (issue with min\_cut\_rematerialization\_partition)},
+  author={{PyTorch issue \#149258}},
+  howpublished={\url{https://github.com/pytorch/pytorch/issues/149258}},
+  year={2025}
+}
+
+@misc{xlaremat,
+  title={{HloRematerialization} pass ({\texttt{hlo\_rematerialization.h}})},
+  author={{OpenXLA contributors}},
+  howpublished={XLA compiler source, \url{https://github.com/openxla/xla/blob/main/xla/hlo/transforms/simplifiers/hlo_rematerialization.h}},
+  year={2026}
+}
+@misc{lonewolf2026gist,
+  title={activation\_memory\_budget sweep: {GPT}-style model, {RTX} 5050 Laptop (pytorch\#197838)},
+  author={{lonewolf15116}},
+  howpublished={GitHub gist, linked from PyTorch issue \#197838, \url{https://gist.github.com/lonewolf15116/1af2cd9c8d56c076755590f9d6eb06a6}},
+  year={2026}
+}
+
+@misc{sacilp,
+  title={{sac\_milp}: a mixed-integer program for selective activation checkpointing ({\texttt{torch.distributed.\_tools.sac\_ilp}})},
+  author={{PyTorch contributors}},
+  howpublished={PyTorch 2.14 source, \url{https://github.com/pytorch/pytorch/blob/v2.14.0/torch/distributed/_tools/sac_ilp.py}},
+  year={2026}
+}
+@misc{torchtitan4636,
+  title={graph\_trainer: budget-aware activation memory policy (auto\_perf\_maxing) ({torchtitan} pull request \#4636, open)},
+  author={{nnurlan008}},
+  howpublished={\url{https://github.com/pytorch/torchtitan/pull/4636}},
+  year={2026}
+}
+
+@inproceedings{he2023fusionaware,
+  title={Transcending Runtime-Memory Tradeoffs in Checkpointing by being Fusion Aware},
+  author={He, Horace and Yu, Shangdi},
+  booktitle={Proceedings of Machine Learning and Systems (MLSys)},
+  volume={5},
+  pages={414--427},
+  year={2023}
+}
+@misc{he2022mincut,
+  title={Min-cut optimal(*) recomputation (i.e. activation checkpointing) with {AOTAutograd}},
+  author={He, Horace},
+  howpublished={PyTorch dev-discuss forum, \url{https://dev-discuss.pytorch.org/t/min-cut-optimal-recomputation-i-e-activation-checkpointing-with-aotautograd/467}},
+  year={2022}
+}
+@misc{torchpartitioners,
+  title={{\texttt{torch/\_functorch/partitioners.py}}},
+  author={{PyTorch contributors}},
+  howpublished={PyTorch 2.14.0 source, \url{https://github.com/pytorch/pytorch/blob/v2.14.0/torch/_functorch/partitioners.py}},
+  year={2026}
+}
+@inproceedings{korthikanti2023reducing,
+  title={Reducing Activation Recomputation in Large Transformer Models},
+  author={Korthikanti, Vijay Anand and Casper, Jared and Lym, Sangkug and McAfee, Lawrence and Andersch, Michael and Shoeybi, Mohammad and Catanzaro, Bryan},
+  booktitle={Proceedings of Machine Learning and Systems (MLSys)},
+  volume={5},
+  year={2023}
+}
+@inproceedings{zheng2020echo,
+  title={Echo: Compiler-based {GPU} Memory Footprint Reduction for {LSTM} {RNN} Training},
+  author={Zheng, Bojian and Vijaykumar, Nandita and Pekhimenko, Gennady},
+  booktitle={ACM/IEEE 47th Annual International Symposium on Computer Architecture (ISCA)},
+  year={2020}
+}
+@inproceedings{wang2018superneurons,
+  title={{SuperNeurons}: Dynamic {GPU} Memory Management for Training Deep Neural Networks},
+  author={Wang, Linnan and Ye, Jinmian and Zhao, Yiyang and Wu, Wei and Li, Ang and Song, Shuaiwen Leon and Xu, Zenglin and Kraska, Tim},
+  booktitle={Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP)},
+  doi={10.1145/3178487.3178491},
+  year={2018}
+}
+@inproceedings{briggs1992remat,
+  title={Rematerialization},
+  author={Briggs, Preston and Cooper, Keith D. and Torczon, Linda},
+  booktitle={Proceedings of the ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI)},
+  year={1992}
+}
+@misc{somers2026checkpointing,
+  title={Trading off compute for memory with activation checkpointing},
+  author={Somers, James},
+  howpublished={Jane Street Tech Blog, \url{https://blog.janestreet.com/trading-off-compute-for-memory-with-activation-checkpointing/}},
+  year={2026},
+  note={30 September 2026}
+}

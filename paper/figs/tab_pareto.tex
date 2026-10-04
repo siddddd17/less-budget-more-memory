@@ -1,0 +1,12 @@
+\begin{tabular}{llrrrrr}
+\toprule
+model & method & budget & peak (MB) & step (ms) & $\Delta$peak (\%) & $\Delta$step (\%) \\
+\midrule
+Llama & all-ops remat & 0.05 & 292 & 914 & -19.7 & +17.7 \\
+Llama & all-ops remat & 0.10 & 336 & 826 & -7.5 & +6.4 \\
+Llama & stock & 0.13 & 363 & 776 & +0.0 & +0.0 \\
+\midrule
+BERT & light remat & 0.05 & 474 & 335 & -0.3 & -0.7 \\
+BERT & stock & 0.05 & 475 & 337 & +0.0 & +0.0 \\
+\bottomrule
+\end{tabular}
