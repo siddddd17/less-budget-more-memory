@@ -1,0 +1,65 @@
+NOTE: emulating the pytorch#190758 fix (RNG ops excluded from memory-budget recompute)
+[bert 0.05 inductor | stock]
+W1003 14:39:37.149000 37303 .venv-cuda/lib/python3.12/site-packages/torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+   peak=475.0MB step=337.0ms compile=191s grads_match=True remat={}
+[bert 0.05 inductor | stock+remat(pw)]
+   peak=473.6MB step=334.7ms compile=242s grads_match=True remat={'peak_before': 443965176, 'peak_after': 311303928, 'area_before': 1799439144108, 'area_after': 1432171268184, 'accepted': 79, 'flops_added': 135298054.0, 'random_ops_before': 97, 'random_ops_after': 97, 'pass_s': 19.17}
+[bert 0.05 inductor | stock+remat(all)]
+   peak=476.8MB step=351.1ms compile=244s grads_match=True remat={'peak_before': 443965176, 'peak_after': 309493496, 'area_before': 1799439144108, 'area_after': 1523267546264, 'accepted': 109, 'flops_added': 9489363974.0, 'random_ops_before': 97, 'random_ops_after': 97, 'pass_s': 25.36}
+[bert 0.05 inductor | solver]
+   peak=381.5MB step=328.7ms compile=376s grads_match=False remat={}
+[bert 0.05 inductor | solver+remat(pw)]
+   peak=380.0MB step=329.4ms compile=390s grads_match=False remat={'peak_before': 434669304, 'peak_after': 300450812, 'area_before': 1531509969600, 'area_after': 1209099285016, 'accepted': 73, 'flops_added': 97789122.0, 'random_ops_before': 97, 'random_ops_after': 97, 'pass_s': 15.48}
+[bert 0.05 inductor | stock (again)]
+   peak=475.0MB step=337.7ms compile=205s grads_match=True remat={}
+[bert 0.10 inductor | stock]
+   peak=574.6MB step=327.9ms compile=261s grads_match=True remat={}
+[bert 0.10 inductor | stock+remat(pw)]
+   peak=573.2MB step=328.4ms compile=280s grads_match=True remat={'peak_before': 574512888, 'peak_after': 441851640, 'area_before': 2427629092820, 'area_after': 2082836799256, 'accepted': 77, 'flops_added': 122715142.0, 'random_ops_before': 97, 'random_ops_after': 97, 'pass_s': 20.44}
+[bert 0.10 inductor | stock+remat(all)]
+   peak=610.0MB step=341.8ms compile=249s grads_match=True remat={'peak_before': 574512888, 'peak_after': 440041208, 'area_before': 2427629092820, 'area_after': 2214200116568, 'accepted': 107, 'flops_added': 9476781062.0, 'random_ops_before': 97, 'random_ops_after': 97, 'pass_s': 26.77}
+[bert 0.10 inductor | solver]
+   peak=574.6MB step=329.0ms compile=331s grads_match=True remat={}
+[bert 0.10 inductor | solver+remat(pw)]
+   peak=573.2MB step=328.2ms compile=352s grads_match=True remat={'peak_before': 574512888, 'peak_after': 441851640, 'area_before': 2427629092820, 'area_after': 2082836799256, 'accepted': 77, 'flops_added': 122715142.0, 'random_ops_before': 97, 'random_ops_after': 97, 'pass_s': 20.26}
+[bert 0.10 inductor | stock (again)]
+   peak=574.6MB step=329.9ms compile=259s grads_match=True remat={}
+[bert 0.15 inductor | stock]
+   peak=667.4MB step=318.4ms compile=290s grads_match=True remat={}
+[bert 0.15 inductor | stock+remat(pw)]
+   peak=645.1MB step=314.2ms compile=277s grads_match=True remat={'peak_before': 678321912, 'peak_after': 545660664, 'area_before': 2860810102636, 'area_after': 2546171078880, 'accepted': 71, 'flops_added': 89150466.0, 'random_ops_before': 97, 'random_ops_after': 97, 'pass_s': 19.35}
+[bert 0.15 inductor | stock+remat(all)]
+   peak=670.5MB step=319.8ms compile=254s grads_match=True remat={'peak_before': 678321912, 'peak_after': 545660664, 'area_before': 2860810102636, 'area_after': 2604518802136, 'accepted': 71, 'flops_added': 2696207362.0, 'random_ops_before': 97, 'random_ops_after': 97, 'pass_s': 19.81}
+[bert 0.15 inductor | solver]
+   peak=667.4MB step=316.2ms compile=342s grads_match=True remat={}
+[bert 0.15 inductor | solver+remat(pw)]
+   peak=645.1MB step=316.3ms compile=335s grads_match=True remat={'peak_before': 678321912, 'peak_after': 545660664, 'area_before': 2860810102636, 'area_after': 2546171078880, 'accepted': 71, 'flops_added': 89150466.0, 'random_ops_before': 97, 'random_ops_after': 97, 'pass_s': 18.71}
+[bert 0.15 inductor | stock (again)]
+   peak=667.4MB step=318.1ms compile=291s grads_match=True remat={}
+
+========================================================================================================================
+model    bud backend   config              peak MB   Δpeak  step ms   Δstep compile s grads
+bert    0.05 inductor  stock                 475.0   +0.0%    337.0   -0.1%       191 True rel_err=0.0e+00
+bert    0.05 inductor  stock+remat(pw)       473.6   -0.3%    334.7   -0.8%       242 True rel_err=2.5e-08
+bert    0.05 inductor  stock+remat(all)      476.8   +0.4%    351.1   +4.1%       244 True rel_err=2.2e-08
+bert    0.05 inductor  solver                381.5  -19.7%    328.7   -2.6%       376 False rel_err=1.2e-02
+bert    0.05 inductor  solver+remat(pw)      380.0  -20.0%    329.4   -2.4%       390 False rel_err=1.2e-02
+bert    0.05 inductor  stock (again)         475.0   +0.0%    337.7   +0.1%       205 True rel_err=4.6e-16
+bert    0.10 inductor  stock                 574.6   +0.0%    327.9   -0.3%       261 True rel_err=0.0e+00
+bert    0.10 inductor  stock+remat(pw)       573.2   -0.2%    328.4   -0.1%       280 True rel_err=2.4e-08
+bert    0.10 inductor  stock+remat(all)      610.0   +6.2%    341.8   +3.9%       249 True rel_err=2.1e-08
+bert    0.10 inductor  solver                574.6   +0.0%    329.0   +0.0%       331 True rel_err=4.4e-16
+bert    0.10 inductor  solver+remat(pw)      573.2   -0.2%    328.2   -0.2%       352 True rel_err=2.4e-08
+bert    0.10 inductor  stock (again)         574.6   +0.0%    329.9   +0.3%       259 True rel_err=4.7e-16
+bert    0.15 inductor  stock                 667.4   +0.0%    318.4   +0.0%       290 True rel_err=0.0e+00
+bert    0.15 inductor  stock+remat(pw)       645.1   -3.3%    314.2   -1.3%       277 True rel_err=2.3e-08
+bert    0.15 inductor  stock+remat(all)      670.5   +0.5%    319.8   +0.5%       254 True rel_err=2.6e-08
+bert    0.15 inductor  solver                667.4   +0.0%    316.2   -0.7%       342 True rel_err=3.4e-16
+bert    0.15 inductor  solver+remat(pw)      645.1   -3.3%    316.3   -0.6%       335 True rel_err=2.3e-08
+bert    0.15 inductor  stock (again)         667.4   +0.0%    318.1   -0.0%       291 True rel_err=4.0e-16
+R1: FAIL
+R2: n/a
+R3: FAIL
+R4: PASS
+wrote experiments/liveness/results/gpu_eval_remat_bert_fixed_v3.json; no repository files modified.
+=== 16:08 gpu_eval_remat_bert_fixed_v3 exit 0

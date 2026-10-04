@@ -1,0 +1,190 @@
+NOTE: emulating the pytorch#190758 fix (RNG ops excluded from memory-budget recompute)
+[bert 0.05 inductor | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W0930 18:57:44.425000 15047 torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+   peak=475.0MB step=329.6ms compile=187s grads_match=True remat={}
+[bert 0.05 inductor | stock+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=375.0MB step=325.7ms compile=235s grads_match=False remat={'peak_before': 443965704, 'peak_after': 286530308, 'area_before': 1809545774776, 'area_after': 1365004895536, 'accepted': 147, 'flops_added': 202019273.0, 'pass_s': 27.49}
+[bert 0.05 inductor | stock+remat(all)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=424.4MB step=335.5ms compile=216s grads_match=False remat={'peak_before': 443965704, 'peak_after': 284950792, 'area_before': 1809545774776, 'area_after': 1399224104112, 'accepted': 147, 'flops_added': 5262387369.0, 'pass_s': 31.36}
+[bert 0.05 inductor | solver]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=381.5MB step=324.5ms compile=378s grads_match=False remat={}
+[bert 0.05 inductor | solver+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=277.7MB step=322.1ms compile=385s grads_match=False remat={'peak_before': 434669832, 'peak_after': 275677956, 'area_before': 1540717883132, 'area_after': 1156303163188, 'accepted': 138, 'flops_added': 151533924.0, 'pass_s': 25.35}
+[bert 0.05 inductor | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=475.0MB step=330.9ms compile=201s grads_match=True remat={}
+[bert 0.05 aot_eager | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1304.2MB step=413.8ms compile=24s grads_match=True remat={}
+[bert 0.05 aot_eager | stock+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1301.6MB step=415.3ms compile=24s grads_match=True remat={'peak_before': 1270783488, 'peak_after': 1269194240, 'area_before': 4159238582484, 'area_after': 4165143743188, 'accepted': 3, 'flops_added': 790528.0, 'pass_s': 0.74}
+[bert 0.05 aot_eager | stock+remat(all)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1301.6MB step=417.0ms compile=25s grads_match=True remat={'peak_before': 1270783488, 'peak_after': 1269194240, 'area_before': 4159238582484, 'area_after': 4165143743188, 'accepted': 3, 'flops_added': 790528.0, 'pass_s': 0.81}
+[bert 0.05 aot_eager | solver]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1304.2MB step=416.2ms compile=29s grads_match=True remat={}
+[bert 0.05 aot_eager | solver+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1301.6MB step=416.2ms compile=32s grads_match=True remat={'peak_before': 1270783488, 'peak_after': 1269194240, 'area_before': 4159238582484, 'area_after': 4165143743188, 'accepted': 3, 'flops_added': 790528.0, 'pass_s': 0.74}
+[bert 0.05 aot_eager | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1304.2MB step=416.8ms compile=24s grads_match=True remat={}
+[bert 0.10 inductor | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=574.6MB step=321.5ms compile=271s grads_match=True remat={}
+[bert 0.10 inductor | stock+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=475.2MB step=316.8ms compile=276s grads_match=False remat={'peak_before': 574513416, 'peak_after': 417078020, 'area_before': 2435884448784, 'area_after': 2037853626660, 'accepted': 143, 'flops_added': 176853449.0, 'pass_s': 29.7}
+[bert 0.10 inductor | stock+remat(all)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=558.6MB step=325.0ms compile=222s grads_match=False remat={'peak_before': 574513416, 'peak_after': 415498504, 'area_before': 2435884448784, 'area_after': 2092372770792, 'accepted': 143, 'flops_added': 5237221545.0, 'pass_s': 32.06}
+[bert 0.10 inductor | solver]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=574.6MB step=321.0ms compile=336s grads_match=True remat={}
+[bert 0.10 inductor | solver+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=475.2MB step=317.8ms compile=352s grads_match=False remat={'peak_before': 574513416, 'peak_after': 417078020, 'area_before': 2435884448784, 'area_after': 2037853626660, 'accepted': 143, 'flops_added': 176853449.0, 'pass_s': 28.0}
+[bert 0.10 inductor | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=574.6MB step=321.4ms compile=258s grads_match=True remat={}
+[bert 0.10 aot_eager | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1431.6MB step=405.1ms compile=22s grads_match=True remat={}
+[bert 0.10 aot_eager | stock+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1430.0MB step=407.2ms compile=25s grads_match=True remat={'peak_before': 1401331200, 'peak_after': 1399741952, 'area_before': 4577530380756, 'area_after': 4584088280020, 'accepted': 3, 'flops_added': 790528.0, 'pass_s': 0.76}
+[bert 0.10 aot_eager | stock+remat(all)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1430.0MB step=406.1ms compile=25s grads_match=True remat={'peak_before': 1401331200, 'peak_after': 1399741952, 'area_before': 4577530380756, 'area_after': 4584088280020, 'accepted': 3, 'flops_added': 790528.0, 'pass_s': 0.81}
+[bert 0.10 aot_eager | solver]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1431.6MB step=407.2ms compile=29s grads_match=True remat={}
+[bert 0.10 aot_eager | solver+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1430.0MB step=407.1ms compile=31s grads_match=True remat={'peak_before': 1401331200, 'peak_after': 1399741952, 'area_before': 4577530380756, 'area_after': 4584088280020, 'accepted': 3, 'flops_added': 790528.0, 'pass_s': 0.74}
+[bert 0.10 aot_eager | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1431.6MB step=408.8ms compile=22s grads_match=True remat={}
+[bert 0.15 inductor | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=666.8MB step=309.3ms compile=298s grads_match=True remat={}
+[bert 0.15 inductor | stock+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=544.9MB step=305.1ms compile=273s grads_match=False remat={'peak_before': 678322440, 'peak_after': 520887044, 'area_before': 2865575033416, 'area_after': 2512339654352, 'accepted': 137, 'flops_added': 143288773.0, 'pass_s': 30.14}
+[bert 0.15 inductor | stock+remat(all)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=597.1MB step=309.5ms compile=261s grads_match=False remat={'peak_before': 678322440, 'peak_after': 520888584, 'area_before': 2865575033416, 'area_after': 2568153870752, 'accepted': 135, 'flops_added': 2749952164.0, 'pass_s': 30.88}
+[bert 0.15 inductor | solver]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=666.8MB step=310.2ms compile=344s grads_match=True remat={}
+[bert 0.15 inductor | solver+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=544.9MB step=304.7ms compile=328s grads_match=False remat={'peak_before': 678322440, 'peak_after': 520887044, 'area_before': 2865575033416, 'area_after': 2512339654352, 'accepted': 137, 'flops_added': 143288773.0, 'pass_s': 29.62}
+[bert 0.15 inductor | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=666.8MB step=308.8ms compile=294s grads_match=True remat={}
+[bert 0.15 aot_eager | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1539.1MB step=397.6ms compile=25s grads_match=True remat={}
+[bert 0.15 aot_eager | stock+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1537.5MB step=398.1ms compile=23s grads_match=True remat={'peak_before': 1505140224, 'peak_after': 1503550976, 'area_before': 4761973442004, 'area_after': 4769050386388, 'accepted': 3, 'flops_added': 790528.0, 'pass_s': 0.68}
+[bert 0.15 aot_eager | stock+remat(all)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1537.5MB step=398.2ms compile=24s grads_match=True remat={'peak_before': 1505140224, 'peak_after': 1503550976, 'area_before': 4761973442004, 'area_after': 4769050386388, 'accepted': 3, 'flops_added': 790528.0, 'pass_s': 0.73}
+[bert 0.15 aot_eager | solver]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1539.1MB step=398.1ms compile=32s grads_match=True remat={}
+[bert 0.15 aot_eager | solver+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1537.5MB step=398.4ms compile=29s grads_match=True remat={'peak_before': 1505140224, 'peak_after': 1503550976, 'area_before': 4761973442004, 'area_after': 4769050386388, 'accepted': 3, 'flops_added': 790528.0, 'pass_s': 0.66}
+[bert 0.15 aot_eager | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1539.1MB step=398.5ms compile=23s grads_match=True remat={}
+
+========================================================================================================================
+model    bud backend   config              peak MB   Δpeak  step ms   Δstep compile s grads
+bert    0.05 inductor  stock                 475.0   +0.0%    329.6   -0.2%       187 True rel_err=0.0e+00
+bert    0.05 inductor  stock+remat(pw)       375.0  -21.0%    325.7   -1.4%       235 False rel_err=1.0e-02
+bert    0.05 inductor  stock+remat(all)      424.4  -10.7%    335.5   +1.6%       216 False rel_err=9.9e-03
+bert    0.05 inductor  solver                381.5  -19.7%    324.5   -1.7%       378 False rel_err=1.2e-02
+bert    0.05 inductor  solver+remat(pw)      277.7  -41.5%    322.1   -2.5%       385 False rel_err=1.5e-02
+bert    0.05 inductor  stock (again)         475.0   +0.0%    330.9   +0.2%       201 True rel_err=4.2e-16
+bert    0.05 aot_eager stock                1304.2   +0.0%    413.8   -0.4%        24 True rel_err=0.0e+00
+bert    0.05 aot_eager stock+remat(pw)      1301.6   -0.2%    415.3   +0.0%        24 True rel_err=0.0e+00
+bert    0.05 aot_eager stock+remat(all)     1301.6   -0.2%    417.0   +0.4%        25 True rel_err=0.0e+00
+bert    0.05 aot_eager solver               1304.2   +0.0%    416.2   +0.2%        29 True rel_err=0.0e+00
+bert    0.05 aot_eager solver+remat(pw)     1301.6   -0.2%    416.2   +0.2%        32 True rel_err=0.0e+00
+bert    0.05 aot_eager stock (again)        1304.2   +0.0%    416.8   +0.4%        24 True rel_err=0.0e+00
+bert    0.10 inductor  stock                 574.6   +0.0%    321.5   +0.0%       271 True rel_err=0.0e+00
+bert    0.10 inductor  stock+remat(pw)       475.2  -17.3%    316.8   -1.5%       276 False rel_err=1.0e-02
+bert    0.10 inductor  stock+remat(all)      558.6   -2.8%    325.0   +1.1%       222 False rel_err=9.9e-03
+bert    0.10 inductor  solver                574.6   +0.0%    321.0   -0.2%       336 True rel_err=3.7e-16
+bert    0.10 inductor  solver+remat(pw)      475.2  -17.3%    317.8   -1.1%       352 False rel_err=1.0e-02
+bert    0.10 inductor  stock (again)         574.6   +0.0%    321.4   -0.0%       258 True rel_err=3.8e-16
+bert    0.10 aot_eager stock                1431.6   +0.0%    405.1   -0.5%        22 True rel_err=0.0e+00
+bert    0.10 aot_eager stock+remat(pw)      1430.0   -0.1%    407.2   +0.0%        25 True rel_err=0.0e+00
+bert    0.10 aot_eager stock+remat(all)     1430.0   -0.1%    406.1   -0.2%        25 True rel_err=0.0e+00
+bert    0.10 aot_eager solver               1431.6   +0.0%    407.2   +0.1%        29 True rel_err=0.0e+00
+bert    0.10 aot_eager solver+remat(pw)     1430.0   -0.1%    407.1   +0.0%        31 True rel_err=0.0e+00
+bert    0.10 aot_eager stock (again)        1431.6   +0.0%    408.8   +0.5%        22 True rel_err=0.0e+00
+bert    0.15 inductor  stock                 666.8   +0.0%    309.3   +0.1%       298 True rel_err=0.0e+00
+bert    0.15 inductor  stock+remat(pw)       544.9  -18.3%    305.1   -1.3%       273 False rel_err=1.0e-02
+bert    0.15 inductor  stock+remat(all)      597.1  -10.5%    309.5   +0.1%       261 False rel_err=9.9e-03
+bert    0.15 inductor  solver                666.8   +0.0%    310.2   +0.4%       344 True rel_err=4.6e-16
+bert    0.15 inductor  solver+remat(pw)      544.9  -18.3%    304.7   -1.4%       328 False rel_err=1.0e-02
+bert    0.15 inductor  stock (again)         666.8   +0.0%    308.8   -0.1%       294 True rel_err=4.3e-16
+bert    0.15 aot_eager stock                1539.1   +0.0%    397.6   -0.1%        25 True rel_err=0.0e+00
+bert    0.15 aot_eager stock+remat(pw)      1537.5   -0.1%    398.1   +0.0%        23 True rel_err=0.0e+00
+bert    0.15 aot_eager stock+remat(all)     1537.5   -0.1%    398.2   +0.0%        24 True rel_err=0.0e+00
+bert    0.15 aot_eager solver               1539.1   +0.0%    398.1   +0.0%        32 True rel_err=0.0e+00
+bert    0.15 aot_eager solver+remat(pw)     1537.5   -0.1%    398.4   +0.1%        29 True rel_err=0.0e+00
+bert    0.15 aot_eager stock (again)        1539.1   +0.0%    398.5   +0.1%        23 True rel_err=0.0e+00
+R1: FAIL
+R2: n/a
+R3: PASS
+R4: PASS
+wrote experiments/liveness/results/gpu_eval_remat_bert_fixed.json; no repository files modified.
