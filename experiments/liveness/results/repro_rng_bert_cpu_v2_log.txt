@@ -1,0 +1,15 @@
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+<repo>/experiments/liveness/repro_rng_bert_cpu.py:85: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  return float(L), g, dict(NAMES), fd
+[v2] budget 1.00 same_fwd=True rel_L2=0.00e+00 FD=5.5e-06 bw_rng={}
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+[v2] budget 0.30 same_fwd=True rel_L2=1.98e-07 FD=4.6e-06 bw_rng={'prims.inductor_random': 13}
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+[v2] budget 0.10 same_fwd=True rel_L2=3.86e-07 FD=6.0e-06 bw_rng={'prims.inductor_random': 13}
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+[v2] budget 0.05 same_fwd=True rel_L2=2.77e-07 FD=5.6e-06 bw_rng={'prims.inductor_random': 13}

@@ -1,0 +1,28 @@
+
+TEST 1: dropout ON
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W0930 14:34:02.150000 12116 torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+   budget 1.0                     rel_L2 vs budget 1.0 = 0.00e+00   random ops: fw=195 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   budget 0.05 stock              rel_L2 vs budget 1.0 = 1.11e-02   random ops: fw=195 bw=195
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   budget 0.05 stock+remat(pw)    rel_L2 vs budget 1.0 = 9.69e-03   random ops: fw=195 bw=195
+
+TEST 2: dropout OFF
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   budget 1.0                     rel_L2 vs budget 1.0 = 0.00e+00   random ops: fw=0 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   budget 0.05 stock              rel_L2 vs budget 1.0 = 3.08e-08   random ops: fw=0 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   budget 0.05 stock+remat(pw)    rel_L2 vs budget 1.0 = 3.03e-08   random ops: fw=0 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   budget 0.05 stock+remat(all)   rel_L2 vs budget 1.0 = 3.19e-08   random ops: fw=0 bw=0
+
+Reading: TEST 2 rel_L2 < 1e-5 for every row means the pass is correct on BERT. In TEST 1, a budget-0.05 *stock* row far from budget 1.0 with bw random ops > 0 means the partitioner regenerates dropout randomness in the backward (a pre-existing issue, not ours).

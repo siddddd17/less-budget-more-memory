@@ -1,0 +1,6 @@
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+budget 1.0: grad change when RNG advanced between fwd and bwd = 2.74e-07  bw_rng={}
+budget 0.05: grad change when RNG advanced between fwd and bwd = 3.70e-02  bw_rng={'prims.inductor_seeds': 1, 'prims.inductor_lookup_seed': 13, 'prims.inductor_random': 13}

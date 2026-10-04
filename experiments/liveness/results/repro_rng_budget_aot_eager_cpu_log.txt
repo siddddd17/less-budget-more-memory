@@ -1,0 +1,9 @@
+<repo>/experiments/liveness/repro_rng_budget.py:86: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  return float(L), [t.cpu() for t in g], dict(BW), fd
+torch 2.14.0+cu130  device=cpu  backend=aot_eager  functionalize_rng_ops=False
+budget 1.00  loss=-37.6653709 (same forward as budget 1.0: True)  rel_L2 vs ref=0.00e+00  random ops fw=8 bw=8  FD(richardson)=3.9e-06
+budget 0.90  loss=-37.6653709 (same forward as budget 1.0: True)  rel_L2 vs ref=1.83e-01  random ops fw=8 bw=14  FD(richardson)=1.2e-02
+budget 0.50  loss=-37.6653709 (same forward as budget 1.0: True)  rel_L2 vs ref=2.10e-01  random ops fw=8 bw=16  FD(richardson)=2.0e-02
+budget 0.10  loss=-37.6653709 (same forward as budget 1.0: True)  rel_L2 vs ref=2.21e-01  random ops fw=8 bw=16  FD(richardson)=2.1e-02
+budget 0.00  loss=-37.6653709 (same forward as budget 1.0: True)  rel_L2 vs ref=2.21e-01  random ops fw=8 bw=16  FD(richardson)=2.1e-02

@@ -1,0 +1,4 @@
+budget 0.05: saved outputs identical=True  bw dropout/rand-named ops v1=97 v2=97
+budget 0.1: saved outputs identical=True  bw dropout/rand-named ops v1=97 v2=97
+budget 0.15: saved outputs identical=True  bw dropout/rand-named ops v1=97 v2=97
+VERDICT: EQUIVALENT under aot_eager
