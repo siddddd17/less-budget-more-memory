@@ -1,0 +1,88 @@
+[llama 0.05 inductor | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W0929 19:09:29.036000 2255 torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+   peak=904.1MB  step=809.4ms  compile=109s  inductor_est=906.428928  
+[llama 0.05 inductor | liveness]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=641.9MB  step=855.1ms  compile=169s  inductor_est=643.465728  solver: 1149.9->717.0 predicted, retained=0.349, 6 calls/51s, invariant=True, added={'mm': 26, 'mean': 65}
+[llama 0.05 inductor | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=904.1MB  step=812.2ms  compile=116s  inductor_est=906.428928  
+[llama 0.05 aot_eager | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1145.4MB  step=877.4ms  compile=25s  inductor_est=None  
+[llama 0.05 aot_eager | liveness]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=693.7MB  step=923.5ms  compile=57s  inductor_est=None  solver: 1139.4->690.3 predicted, retained=0.349, 6 calls/31s, invariant=True, added={'mm': 27, 'mean': 65}
+[llama 0.05 aot_eager | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1145.4MB  step=877.8ms  compile=25s  inductor_est=None  
+[llama 0.15 inductor | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=383.6MB  step=774.0ms  compile=128s  inductor_est=378.014208  
+[llama 0.15 inductor | liveness]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=367.2MB  step=775.8ms  compile=164s  inductor_est=362.94912  solver: 271.5->252.4 predicted, retained=1.000, 5 calls/43s, invariant=True, added={'mean': 65, 'mm': 8}
+[llama 0.15 inductor | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=383.6MB  step=776.7ms  compile=127s  inductor_est=378.014208  
+[llama 0.15 aot_eager | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=274.8MB  step=842.3ms  compile=26s  inductor_est=None  
+[llama 0.15 aot_eager | liveness]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=263.5MB  step=836.8ms  compile=56s  inductor_est=None  solver: 274.2->263.4 predicted, retained=1.000, 5 calls/33s, invariant=True, added={'mm': 14, 'mean': 65}
+[llama 0.15 aot_eager | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=274.8MB  step=841.8ms  compile=27s  inductor_est=None  
+[bert 0.05 inductor | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=476.4MB  step=332.1ms  compile=224s  inductor_est=529.103112  
+[bert 0.05 inductor | liveness]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=383.0MB  step=323.6ms  compile=387s  inductor_est=431.464712  solver: 444.0->434.7 predicted, retained=1.000, 6 calls/63s, invariant=True, added={'addmm': 16, 'amax': 32, 'sum': 32, 'var_mean': 65, 'any': 32}
+[bert 0.05 inductor | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=476.4MB  step=332.3ms  compile=215s  inductor_est=529.103112  
+[bert 0.05 aot_eager | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=429.5MB  step=430.7ms  compile=24s  inductor_est=None  
+[bert 0.05 aot_eager | liveness]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=417.0MB  step=431.3ms  compile=50s  inductor_est=None  solver: 400.4->389.4 predicted, retained=1.000, 5 calls/27s, invariant=True, added={'addmm': 13}
+[bert 0.05 aot_eager | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=429.5MB  step=431.9ms  compile=23s  inductor_est=None  
+
+==============================================================================================================
+model    bud backend    stock MB liveness MB   Δpeak   Δstep  drift solver s calls  invariant
+llama   0.05 inductor      904.1       641.9  -29.0%   +5.5%  +0.3%       51     6  True
+llama   0.05 aot_eager    1145.4       693.7  -39.4%   +5.2%  +0.0%       31     6  True
+llama   0.15 inductor      383.6       367.2   -4.3%   +0.1%  +0.4%       43     5  True
+llama   0.15 aot_eager     274.8       263.5   -4.1%   -0.6%  -0.1%       33     5  True
+bert    0.05 inductor      476.4       383.0  -19.6%   -2.6%  +0.0%       63     6  True
+bert    0.05 aot_eager     429.5       417.0   -2.9%   -0.0%  +0.3%       27     5  True
+
+G1 efficacy (Llama 0.05 Inductor >= 10% lower): PASS
+G2 safety   (never > 1% above stock)          : PASS
+G3 cost     (step-time <= +10%)               : PASS
+G4 invariant                                  : PASS
+wrote experiments/liveness/results/gpu_eval_liveness_solver.json; no repository files modified.
