@@ -1,0 +1,5 @@
+# Versions used for every result in the paper (GTX 1650, CUDA 13.0 wheels, WSL2):
+torch==2.14.0          # the +cu130 build was used
+transformers==5.17.0
+matplotlib             # only for paper/make_figures.py
+pytest                 # only for prototype/test_use_site_remat.py
