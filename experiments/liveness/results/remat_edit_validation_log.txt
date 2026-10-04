@@ -1,0 +1,137 @@
+[llama 0.05 inductor | pointwise | full pass]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W1004 11:56:08.453000 47786 .venv-cuda/lib/python3.12/site-packages/torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+[llama 0.05 inductor | pointwise | first 0/180 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=   0  predicted bw   1149.9  inductor est    906.4  measured    904.1 MB
+[llama 0.05 inductor | pointwise | first 22/180 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  22  predicted bw   1025.9  inductor est    844.4  measured    840.8 MB
+[llama 0.05 inductor | pointwise | first 45/180 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  45  predicted bw    896.2  inductor est    782.4  measured    779.5 MB
+[llama 0.05 inductor | pointwise | first 90/180 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  90  predicted bw    741.7  inductor est    704.4  measured    705.9 MB
+[llama 0.05 inductor | pointwise | first 135/180 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k= 135  predicted bw    647.3  inductor est    649.9  measured    649.4 MB
+   k= 180  predicted bw    634.4  inductor est    651.2  measured    653.2 MB
+== 0.05 pointwise: N=180  full-pass change predicted -515.4 MB, Inductor est -255.2 MB, measured -250.9 MB;  rho(pred, meas)=0.943  rho(ind, meas)=1.000
+[llama 0.05 inductor | all | full pass]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+[llama 0.05 inductor | all | first 0/282 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=   0  predicted bw   1149.9  inductor est    906.4  measured    904.1 MB
+[llama 0.05 inductor | all | first 35/282 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  35  predicted bw    952.6  inductor est    759.9  measured    756.3 MB
+[llama 0.05 inductor | all | first 70/282 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  70  predicted bw    755.3  inductor est    613.4  measured    610.4 MB
+[llama 0.05 inductor | all | first 141/282 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k= 141  predicted bw    414.6  inductor est    394.2  measured    386.1 MB
+[llama 0.05 inductor | all | first 212/282 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k= 212  predicted bw    265.7  inductor est    432.0  measured    423.9 MB
+   k= 282  predicted bw    200.4  inductor est    295.9  measured    291.7 MB
+== 0.05 all: N=282  full-pass change predicted -949.5 MB, Inductor est -610.5 MB, measured -612.4 MB;  rho(pred, meas)=0.943  rho(ind, meas)=1.000
+[llama 0.10 inductor | pointwise | full pass]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+[llama 0.10 inductor | pointwise | first 0/69 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=   0  predicted bw    586.3  inductor est    578.9  measured    584.0 MB
+[llama 0.10 inductor | pointwise | first 9/69 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=   9  predicted bw    535.6  inductor est    556.3  measured    560.6 MB
+[llama 0.10 inductor | pointwise | first 17/69 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  17  predicted bw    490.5  inductor est    533.8  measured    538.9 MB
+[llama 0.10 inductor | pointwise | first 34/69 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  34  predicted bw    423.0  inductor est    499.3  measured    504.3 MB
+[llama 0.10 inductor | pointwise | first 52/69 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  52  predicted bw    385.3  inductor est    480.4  measured    485.4 MB
+   k=  69  predicted bw    378.8  inductor est    478.2  measured    483.2 MB
+== 0.10 pointwise: N=69  full-pass change predicted -207.5 MB, Inductor est -100.6 MB, measured -100.8 MB;  rho(pred, meas)=1.000  rho(ind, meas)=1.000
+[llama 0.10 inductor | all | full pass]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+[llama 0.10 inductor | all | first 0/115 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=   0  predicted bw    586.3  inductor est    578.9  measured    584.0 MB
+[llama 0.10 inductor | all | first 14/115 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  14  predicted bw    507.4  inductor est    522.5  measured    528.3 MB
+[llama 0.10 inductor | all | first 29/115 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  29  predicted bw    422.9  inductor est    460.5  measured    466.1 MB
+[llama 0.10 inductor | all | first 58/115 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  58  predicted bw    281.2  inductor est    367.5  measured    372.5 MB
+[llama 0.10 inductor | all | first 86/115 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  86  predicted bw    222.5  inductor est    352.8  measured    358.4 MB
+   k= 115  predicted bw    170.9  inductor est    329.7  measured    336.0 MB
+== 0.10 all: N=115  full-pass change predicted -415.4 MB, Inductor est -249.2 MB, measured -248.0 MB;  rho(pred, meas)=1.000  rho(ind, meas)=1.000
+[llama 0.15 inductor | pointwise | full pass]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+[llama 0.15 inductor | pointwise | first 0/1 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=   0  predicted bw    271.5  inductor est    378.0  measured    383.6 MB
+   k=   1  predicted bw    269.4  inductor est    378.0  measured    383.6 MB
+== 0.15 pointwise: N=1  full-pass change predicted -2.1 MB, Inductor est +0.0 MB, measured +0.0 MB;  rho(pred, meas)=nan  rho(ind, meas)=nan
+[llama 0.15 inductor | all | full pass]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+[llama 0.15 inductor | all | first 0/30 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=   0  predicted bw    271.5  inductor est    378.0  measured    383.6 MB
+[llama 0.15 inductor | all | first 4/30 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=   4  predicted bw    262.3  inductor est    378.0  measured    383.6 MB
+[llama 0.15 inductor | all | first 8/30 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=   8  predicted bw    253.9  inductor est    378.0  measured    383.6 MB
+[llama 0.15 inductor | all | first 15/30 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  15  predicted bw    239.3  inductor est    378.0  measured    383.0 MB
+[llama 0.15 inductor | all | first 22/30 edits]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   k=  22  predicted bw    224.6  inductor est    378.0  measured    383.0 MB
+   k=  30  predicted bw    207.8  inductor est    378.0  measured    383.0 MB
+== 0.15 all: N=30  full-pass change predicted -63.7 MB, Inductor est +0.0 MB, measured -0.6 MB;  rho(pred, meas)=0.741  rho(ind, meas)=-0.141
+wrote experiments/liveness/results/remat_edit_validation.json
+=== 13:15 remat_edit_validation exit 0

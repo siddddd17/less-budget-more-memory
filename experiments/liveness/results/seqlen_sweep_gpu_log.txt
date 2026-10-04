@@ -1,0 +1,311 @@
+[S=256 I=688 2S/I=0.74 b=0.02 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W1004 08:35:17.490000 42587 .venv-cuda/lib/python3.12/site-packages/torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+   peak=234.9MB step=123.9ms attn_saved=0 mlp_saved=10
+[S=256 I=688 2S/I=0.74 b=0.05 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=158.8MB step=121.4ms attn_saved=0 mlp_saved=26
+[S=256 I=688 2S/I=0.74 b=0.05 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=126.2MB step=122.1ms attn_saved=0 mlp_saved=26
+[S=256 I=688 2S/I=0.74 b=0.05 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=114.1MB step=129.3ms attn_saved=0 mlp_saved=26
+[S=256 I=688 2S/I=0.74 b=0.10 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=113.5MB step=119.7ms attn_saved=19 mlp_saved=32
+[S=256 I=688 2S/I=0.74 b=0.10 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=113.5MB step=119.3ms attn_saved=19 mlp_saved=32
+[S=256 I=688 2S/I=0.74 b=0.10 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=114.8MB step=121.0ms attn_saved=19 mlp_saved=32
+[S=256 I=688 2S/I=0.74 b=0.15 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=118.8MB step=114.7ms attn_saved=32 mlp_saved=32
+[S=256 I=688 2S/I=0.74 b=0.20 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=119.9MB step=112.9ms attn_saved=32 mlp_saved=32
+[S=256 I=688 2S/I=0.74 b=0.30 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=121.8MB step=110.0ms attn_saved=32 mlp_saved=32
+[S=256 I=688 2S/I=0.74 b=1.00 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=274.4MB step=97.2ms attn_saved=None mlp_saved=None
+[S=512 I=688 2S/I=1.49 b=0.02 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=518.6MB step=281.2ms attn_saved=10 mlp_saved=0
+[S=512 I=688 2S/I=1.49 b=0.05 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=448.3MB step=271.8ms attn_saved=25 mlp_saved=0
+[S=512 I=688 2S/I=1.49 b=0.05 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=325.1MB step=272.8ms attn_saved=25 mlp_saved=0
+[S=512 I=688 2S/I=1.49 b=0.05 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=206.5MB step=310.3ms attn_saved=25 mlp_saved=0
+[S=512 I=688 2S/I=1.49 b=0.10 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=248.8MB step=263.6ms attn_saved=31 mlp_saved=20
+[S=512 I=688 2S/I=1.49 b=0.10 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=215.6MB step=264.3ms attn_saved=31 mlp_saved=20
+[S=512 I=688 2S/I=1.49 b=0.10 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=158.2MB step=279.3ms attn_saved=31 mlp_saved=20
+[S=512 I=688 2S/I=1.49 b=0.15 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=176.5MB step=259.0ms attn_saved=32 mlp_saved=32
+[S=512 I=688 2S/I=1.49 b=0.20 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=193.8MB step=256.8ms attn_saved=32 mlp_saved=32
+[S=512 I=688 2S/I=1.49 b=0.30 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=221.5MB step=251.1ms attn_saved=32 mlp_saved=32
+[S=512 I=688 2S/I=1.49 b=1.00 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=548.0MB step=231.4ms attn_saved=None mlp_saved=None
+[S=1024 I=688 2S/I=2.98 b=0.02 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1050.0MB step=848.3ms attn_saved=10 mlp_saved=0
+[S=1024 I=688 2S/I=2.98 b=0.05 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=904.8MB step=812.0ms attn_saved=25 mlp_saved=0
+[S=1024 I=688 2S/I=2.98 b=0.05 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=653.9MB step=813.3ms attn_saved=25 mlp_saved=0
+[S=1024 I=688 2S/I=2.98 b=0.05 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=292.3MB step=914.2ms attn_saved=25 mlp_saved=0
+[S=1024 I=688 2S/I=2.98 b=0.10 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=584.5MB step=784.4ms attn_saved=32 mlp_saved=18
+[S=1024 I=688 2S/I=2.98 b=0.10 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=483.2MB step=785.6ms attn_saved=32 mlp_saved=18
+[S=1024 I=688 2S/I=2.98 b=0.10 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=336.0MB step=828.7ms attn_saved=32 mlp_saved=18
+[S=1024 I=688 2S/I=2.98 b=0.15 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=383.7MB step=775.4ms attn_saved=32 mlp_saved=32
+[S=1024 I=688 2S/I=2.98 b=0.20 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=415.1MB step=767.5ms attn_saved=32 mlp_saved=32
+[S=1024 I=688 2S/I=2.98 b=0.30 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=473.7MB step=757.6ms attn_saved=32 mlp_saved=32
+[S=1024 I=688 2S/I=2.98 b=1.00 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1109.2MB step=709.1ms attn_saved=None mlp_saved=None
+[S=2048 I=688 2S/I=5.95 b=0.02 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=2099.7MB step=2734.9ms attn_saved=10 mlp_saved=0
+[S=2048 I=688 2S/I=5.95 b=0.05 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1818.4MB step=2588.3ms attn_saved=25 mlp_saved=0
+[S=2048 I=688 2S/I=5.95 b=0.05 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1316.1MB step=2588.2ms attn_saved=25 mlp_saved=0
+[S=2048 I=688 2S/I=5.95 b=0.05 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=596.7MB step=2817.4ms attn_saved=25 mlp_saved=0
+[S=2048 I=688 2S/I=5.95 b=0.10 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1314.9MB step=2515.5ms attn_saved=32 mlp_saved=18
+[S=2048 I=688 2S/I=5.95 b=0.10 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1105.3MB step=2520.3ms attn_saved=32 mlp_saved=18
+[S=2048 I=688 2S/I=5.95 b=0.10 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=791.2MB step=2616.8ms attn_saved=32 mlp_saved=18
+[S=2048 I=688 2S/I=5.95 b=0.15 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=913.2MB step=2504.8ms attn_saved=32 mlp_saved=32
+[S=2048 I=688 2S/I=5.95 b=0.20 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1028.8MB step=2495.0ms attn_saved=32 mlp_saved=32
+[S=2048 I=688 2S/I=5.95 b=0.30 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1241.4MB step=2471.0ms attn_saved=32 mlp_saved=32
+[S=2048 I=688 2S/I=5.95 b=1.00 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=2210.9MB step=2369.3ms attn_saved=None mlp_saved=None
+[S=1024 I=344 2S/I=5.95 b=0.02 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=805.2MB step=762.5ms attn_saved=7 mlp_saved=0
+[S=1024 I=344 2S/I=5.95 b=0.05 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=687.7MB step=733.4ms attn_saved=19 mlp_saved=0
+[S=1024 I=344 2S/I=5.95 b=0.05 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=508.6MB step=732.5ms attn_saved=19 mlp_saved=0
+[S=1024 I=344 2S/I=5.95 b=0.05 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=303.2MB step=797.9ms attn_saved=19 mlp_saved=0
+[S=1024 I=344 2S/I=5.95 b=0.10 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=596.8MB step=697.4ms attn_saved=32 mlp_saved=5
+[S=1024 I=344 2S/I=5.95 b=0.10 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=459.0MB step=698.3ms attn_saved=32 mlp_saved=5
+[S=1024 I=344 2S/I=5.95 b=0.10 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=279.7MB step=752.0ms attn_saved=32 mlp_saved=5
+[S=1024 I=344 2S/I=5.95 b=0.15 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=441.0MB step=693.1ms attn_saved=32 mlp_saved=23
+[S=1024 I=344 2S/I=5.95 b=0.20 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=385.4MB step=692.0ms attn_saved=32 mlp_saved=32
+[S=1024 I=344 2S/I=5.95 b=0.30 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=467.2MB step=684.5ms attn_saved=32 mlp_saved=32
+[S=1024 I=344 2S/I=5.95 b=1.00 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=840.1MB step=643.7ms attn_saved=None mlp_saved=None
+[S=1024 I=1376 2S/I=1.49 b=0.02 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1548.8MB step=1006.4ms attn_saved=15 mlp_saved=0
+[S=1024 I=1376 2S/I=1.49 b=0.05 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1211.6MB step=956.8ms attn_saved=32 mlp_saved=6
+[S=1024 I=1376 2S/I=1.49 b=0.05 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=883.2MB step=958.4ms attn_saved=32 mlp_saved=6
+[S=1024 I=1376 2S/I=1.49 b=0.05 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=325.1MB step=1109.1ms attn_saved=32 mlp_saved=6
+[S=1024 I=1376 2S/I=1.49 b=0.10 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=398.8MB step=920.7ms attn_saved=32 mlp_saved=32
+[S=1024 I=1376 2S/I=1.49 b=0.10 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=398.8MB step=923.7ms attn_saved=32 mlp_saved=32
+[S=1024 I=1376 2S/I=1.49 b=0.10 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=397.4MB step=958.4ms attn_saved=32 mlp_saved=32
+[S=1024 I=1376 2S/I=1.49 b=0.15 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=474.6MB step=914.4ms attn_saved=32 mlp_saved=32
+[S=1024 I=1376 2S/I=1.49 b=0.20 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=562.0MB step=910.4ms attn_saved=32 mlp_saved=32
+[S=1024 I=1376 2S/I=1.49 b=0.30 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=724.1MB step=895.1ms attn_saved=32 mlp_saved=32
+[S=1024 I=1376 2S/I=1.49 b=1.00 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1650.3MB step=831.9ms attn_saved=None mlp_saved=None
+[S=1024 I=2752 2S/I=0.74 b=0.02 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1048.4MB step=1350.4ms attn_saved=0 mlp_saved=25
+[S=1024 I=2752 2S/I=0.74 b=0.05 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=489.0MB step=1259.8ms attn_saved=30 mlp_saved=32
+[S=1024 I=2752 2S/I=0.74 b=0.05 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=487.5MB step=1264.7ms attn_saved=30 mlp_saved=32
+[S=1024 I=2752 2S/I=0.74 b=0.05 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=485.4MB step=1285.5ms attn_saved=30 mlp_saved=32
+[S=1024 I=2752 2S/I=0.74 b=0.10 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=610.1MB step=1246.2ms attn_saved=32 mlp_saved=32
+[S=1024 I=2752 2S/I=0.74 b=0.10 remat=pointwise]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=609.9MB step=1248.6ms attn_saved=32 mlp_saved=32
+[S=1024 I=2752 2S/I=0.74 b=0.10 remat=all]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=615.3MB step=1267.4ms attn_saved=32 mlp_saved=32
+[S=1024 I=2752 2S/I=0.74 b=0.15 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=742.5MB step=1233.5ms attn_saved=32 mlp_saved=32
+[S=1024 I=2752 2S/I=0.74 b=0.20 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=869.3MB step=1218.9ms attn_saved=32 mlp_saved=32
+[S=1024 I=2752 2S/I=0.74 b=0.30 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1148.4MB step=1195.2ms attn_saved=32 mlp_saved=32
+[S=1024 I=2752 2S/I=0.74 b=1.00 remat=None]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=2804.9MB step=1090.3ms attn_saved=None mlp_saved=None
+wrote experiments/liveness/results/seqlen_sweep_gpu.json (77 entries)
+=== 11:54 seqlen_sweep_gpu exit 0

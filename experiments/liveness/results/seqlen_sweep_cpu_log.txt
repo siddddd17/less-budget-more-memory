@@ -1,0 +1,50 @@
+[S=256 I=688 2S/I=0.74]
+  S=  256 I=  688 b=0.02  stock    278.5 MB (attn  0, mlp 11 saved)  light    165.8  all    107.7  97s
+  S=  256 I=  688 b=0.05  stock    171.5 MB (attn  0, mlp 27 saved)  light    120.8  all    107.7  66s
+  S=  256 I=  688 b=0.10  stock    109.6 MB (attn 22, mlp 32 saved)  light    108.0  all    106.1  20s
+  S=  256 I=  688 b=0.15  stock    114.0 MB (attn 32, mlp 32 saved)  light    112.4  all    111.0  19s
+  S=  256 I=  688 b=0.20  stock    119.6 MB (attn 32, mlp 32 saved)  light    118.0  all    116.6  24s
+  S=  256 I=  688 b=0.30  stock    116.8 MB (attn 32, mlp 32 saved)  light    115.2  all    114.8  39s
+[S=512 I=688 2S/I=1.49]
+  S=  512 I=  688 b=0.02  stock    651.9 MB (attn 10, mlp  0 saved)  light    362.6  all    128.4  133s
+  S=  512 I=  688 b=0.05  stock    567.9 MB (attn 26, mlp  0 saved)  light    312.2  all    114.3  100s
+  S=  512 I=  688 b=0.10  stock    253.4 MB (attn 32, mlp 21 saved)  light    172.9  all    114.3  53s
+  S=  512 I=  688 b=0.15  stock    136.9 MB (attn 32, mlp 32 saved)  light    135.9  all    130.5  33s
+  S=  512 I=  688 b=0.20  stock    161.8 MB (attn 32, mlp 32 saved)  light    160.8  all    154.5  35s
+  S=  512 I=  688 b=0.30  stock    204.4 MB (attn 32, mlp 32 saved)  light    203.4  all    198.4  32s
+[S=1024 I=688 2S/I=2.98]
+  S= 1024 I=  688 b=0.02  stock   1307.3 MB (attn 10, mlp  0 saved)  light    728.6  all    260.3  142s
+  S= 1024 I=  688 b=0.05  stock   1139.4 MB (attn 26, mlp  0 saved)  light    628.0  all    193.2  112s
+  S= 1024 I=  688 b=0.10  stock    506.1 MB (attn 32, mlp 21 saved)  light    345.1  all    167.1  55s
+  S= 1024 I=  688 b=0.15  stock    274.2 MB (attn 32, mlp 32 saved)  light    272.1  all    212.0  35s
+  S= 1024 I=  688 b=0.20  stock    324.0 MB (attn 32, mlp 32 saved)  light    321.9  all    270.2  35s
+  S= 1024 I=  688 b=0.30  stock    409.2 MB (attn 32, mlp 32 saved)  light    407.1  all    386.8  32s
+[S=2048 I=688 2S/I=5.95]
+  S= 2048 I=  688 b=0.02  stock   2631.3 MB (attn 10, mlp  0 saved)  light   1473.3  all    536.7  137s
+  S= 2048 I=  688 b=0.05  stock   2295.4 MB (attn 26, mlp  0 saved)  light   1272.0  all    402.4  113s
+  S= 2048 I=  688 b=0.10  stock   1013.9 MB (attn 32, mlp 21 saved)  light    691.8  all    346.8  58s
+  S= 2048 I=  688 b=0.15  stock    570.0 MB (attn 32, mlp 32 saved)  light    565.8  all    437.1  35s
+  S= 2048 I=  688 b=0.20  stock    692.7 MB (attn 32, mlp 32 saved)  light    688.5  all    555.6  35s
+  S= 2048 I=  688 b=0.30  stock    926.5 MB (attn 32, mlp 32 saved)  light    922.3  all    789.4  35s
+[S=1024 I=344 2S/I=5.95]
+  S= 1024 I=  344 b=0.02  stock    967.5 MB (attn  8, mlp  0 saved)  light    552.0  all    257.1  137s
+  S= 1024 I=  344 b=0.05  stock    841.6 MB (attn 20, mlp  0 saved)  light    476.5  all    206.7  122s
+  S= 1024 I=  344 b=0.10  stock    590.0 MB (attn 32, mlp  8 saved)  light    357.4  all    159.5  84s
+  S= 1024 I=  344 b=0.15  stock    265.0 MB (attn 32, mlp 29 saved)  light    243.2  all    164.9  38s
+  S= 1024 I=  344 b=0.20  stock    272.1 MB (attn 32, mlp 32 saved)  light    270.0  all    207.0  34s
+  S= 1024 I=  344 b=0.30  stock    360.1 MB (attn 32, mlp 32 saved)  light    358.0  all    295.1  33s
+[S=1024 I=1376 2S/I=1.49]
+  S= 1024 I= 1376 b=0.02  stock   1982.6 MB (attn 15, mlp  0 saved)  light   1075.5  all    262.6  126s
+  S= 1024 I= 1376 b=0.05  stock   1450.6 MB (attn 32, mlp  7 saved)  light    802.3  all    222.8  85s
+  S= 1024 I= 1376 b=0.10  stock    305.2 MB (attn 32, mlp 32 saved)  light    303.1  all    255.5  39s
+  S= 1024 I= 1376 b=0.15  stock    367.3 MB (attn 32, mlp 32 saved)  light    365.2  all    333.6  37s
+  S= 1024 I= 1376 b=0.20  stock    432.4 MB (attn 32, mlp 32 saved)  light    430.3  all    413.6  33s
+  S= 1024 I= 1376 b=0.30  stock    582.8 MB (attn 32, mlp 32 saved)  light    580.7  all    569.5  31s
+[S=1024 I=2752 2S/I=0.74]
+  S= 1024 I= 2752 b=0.02  stock   1236.0 MB (attn  0, mlp 25 saved)  light    799.3  all    410.0  84s
+  S= 1024 I= 2752 b=0.05  stock    431.5 MB (attn 30, mlp 32 saved)  light    425.0  all    400.4  21s
+  S= 1024 I= 2752 b=0.10  stock    557.3 MB (attn 32, mlp 32 saved)  light    550.8  all    519.9  22s
+  S= 1024 I= 2752 b=0.15  stock    687.3 MB (attn 32, mlp 32 saved)  light    680.8  all    643.6  25s
+  S= 1024 I= 2752 b=0.20  stock    815.3 MB (attn 32, mlp 32 saved)  light    808.8  all    765.2  25s
+  S= 1024 I= 2752 b=0.30  stock   1073.2 MB (attn 32, mlp 32 saved)  light   1066.7  all   1012.7  33s
+wrote experiments/liveness/results/seqlen_sweep_cpu.json (7 entries)
