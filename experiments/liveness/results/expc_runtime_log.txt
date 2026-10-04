@@ -1,0 +1,130 @@
+[llama 0.05 aot_eager | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=stock
+   peak=1145.9MB (oracle 1139.4, inductor_est None)  step=873.3ms [p10 871.7, p90 876.1]  retained=1.000  est_recompute: flops=1.165e+11 profile=96.58ms real_op=nanms  w=0.0486/0.05  oracle=19 calls/147s
+[llama 0.05 aot_eager | retain>=0.90] same plan as 'stock', skipped
+[llama 0.05 aot_eager | unconstrained]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=mm[2048, 256]<-[mul(mm+silu)] x32 @0.75
+   peak=769.9MB (oracle 765.6, inductor_est None)  step=921.6ms [p10 919.7, p90 925.6]  retained=0.425  est_recompute: flops=1.486e+11 profile=142.67ms real_op=nanms  w=0.0492/0.05  oracle=19 calls/147s
+[llama 0.05 aot_eager | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=stock
+   peak=1145.9MB (oracle 1139.4, inductor_est None)  step=877.3ms [p10 876.6, p90 880.3]  retained=1.000  est_recompute: flops=1.165e+11 profile=95.76ms real_op=nanms  w=0.0486/0.05  oracle=19 calls/147s
+[llama 0.05 inductor | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W0929 10:33:24.125000 853 torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+   plan=stock
+   peak=904.6MB (oracle 1149.9, inductor_est 906.428928)  step=810.8ms [p10 809.2, p90 811.8]  retained=1.000  est_recompute: flops=1.186e+11 profile=98.25ms real_op=nanms  w=0.0496/0.05  oracle=19 calls/44s
+[llama 0.05 inductor | retain>=0.90] same plan as 'stock', skipped
+[llama 0.05 inductor | unconstrained]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=mm[2048, 256]<-[mul(div+mm)] x32 @0.75
+   peak=691.6MB (oracle 776.1, inductor_est 685.310464)  step=852.9ms [p10 850.8, p90 855.1]  retained=0.403  est_recompute: flops=1.507e+11 profile=138.38ms real_op=nanms  w=0.0501/0.05  oracle=19 calls/44s
+[llama 0.05 inductor | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=stock
+   peak=904.6MB (oracle 1149.9, inductor_est 906.428928)  step=811.1ms [p10 809.6, p90 813.8]  retained=1.000  est_recompute: flops=1.186e+11 profile=97.67ms real_op=nanms  w=0.0496/0.05  oracle=19 calls/44s
+[llama 0.15 aot_eager | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=stock
+   peak=275.3MB (oracle 274.2, inductor_est None)  step=838.3ms [p10 835.6, p90 842.1]  retained=1.000  est_recompute: flops=7.587e+10 profile=54.07ms real_op=56.62ms  w=0.1493/0.15  oracle=21 calls/177s
+[llama 0.15 aot_eager | retain>=0.90]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5
+   peak=247.4MB (oracle 246.2, inductor_est None)  step=839.7ms [p10 836.3, p90 841.6]  retained=0.999  est_recompute: flops=7.597e+10 profile=64.37ms real_op=66.99ms  w=0.1487/0.15  oracle=21 calls/177s
+[llama 0.15 aot_eager | unconstrained] same plan as 'retain>=0.90', skipped
+[llama 0.15 aot_eager | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=stock
+   peak=275.3MB (oracle 274.2, inductor_est None)  step=841.0ms [p10 838.1, p90 843.8]  retained=1.000  est_recompute: flops=7.587e+10 profile=54.66ms real_op=57.50ms  w=0.1493/0.15  oracle=21 calls/177s
+[llama 0.15 inductor | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=stock
+   peak=384.1MB (oracle 271.5, inductor_est 378.014208)  step=774.8ms [p10 773.2, p90 775.6]  retained=1.000  est_recompute: flops=7.702e+10 profile=54.64ms real_op=57.75ms  w=0.1502/0.15  oracle=21 calls/51s
+[llama 0.15 inductor | retain>=0.90]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.25
+   peak=365.9MB (oracle 254.6, inductor_est 361.10592)  step=774.2ms [p10 772.2, p90 775.5]  retained=1.000  est_recompute: flops=7.704e+10 profile=59.80ms real_op=62.07ms  w=0.1501/0.15  oracle=21 calls/51s
+[llama 0.15 inductor | unconstrained] same plan as 'retain>=0.90', skipped
+[llama 0.15 inductor | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=stock
+   peak=384.1MB (oracle 271.5, inductor_est 378.014208)  step=773.5ms [p10 771.7, p90 775.0]  retained=1.000  est_recompute: flops=7.702e+10 profile=54.41ms real_op=56.96ms  w=0.1502/0.15  oracle=21 calls/51s
+[bert 0.05 aot_eager | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=stock
+   peak=428.1MB (oracle 400.4, inductor_est None)  step=430.0ms [p10 428.2, p90 433.1]  retained=1.000  est_recompute: flops=6.156e+10 profile=61.64ms real_op=64.62ms  w=0.0494/0.05  oracle=31 calls/240s
+[bert 0.05 aot_eager | retain>=0.90]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @0.5
+   peak=230.8MB (oracle 208.3, inductor_est None)  step=435.4ms [p10 432.8, p90 447.8]  retained=0.940  est_recompute: flops=6.442e+10 profile=69.87ms real_op=65.50ms  w=0.0500/0.05  oracle=31 calls/240s
+[bert 0.05 aot_eager | unconstrained] same plan as 'retain>=0.90', skipped
+[bert 0.05 aot_eager | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=stock
+   peak=428.1MB (oracle 400.4, inductor_est None)  step=434.7ms [p10 433.2, p90 438.6]  retained=1.000  est_recompute: flops=6.156e+10 profile=69.63ms real_op=65.07ms  w=0.0494/0.05  oracle=31 calls/240s
+[bert 0.05 inductor | stock]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=stock
+   peak=475.0MB (oracle 444.0, inductor_est 529.103112)  step=331.5ms [p10 329.4, p90 332.9]  retained=1.000  est_recompute: flops=6.156e+10 profile=71.74ms real_op=86.80ms  w=0.0494/0.05  oracle=55 calls/178s
+[bert 0.05 inductor | retain>=0.90]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=addmm[2048, 192]<-[bmm(addmm+mul)] x32 @0.5; prims.inductor_lookup_seed.default<-[prims.inductor_seeds.default] x97 @1
+   peak=456.1MB (oracle 418.8, inductor_est 510.228224)  step=336.3ms [p10 334.7, p90 339.8]  retained=1.000  est_recompute: flops=6.156e+10 profile=61.27ms real_op=64.59ms  w=0.0494/0.05  oracle=55 calls/178s
+[bert 0.05 inductor | unconstrained] same plan as 'retain>=0.90', skipped
+[bert 0.05 inductor | stock (again)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   plan=stock
+   peak=475.0MB (oracle 444.0, inductor_est 529.103112)  step=330.7ms [p10 329.8, p90 332.7]  retained=1.000  est_recompute: flops=6.156e+10 profile=70.54ms real_op=82.86ms  w=0.0494/0.05  oracle=55 calls/178s
+
+============================================================================================================================
+model    bud backend   policy          peak MB   Δpeak  step ms   Δstep Δstep ms retain  Δprof ms  Δreal ms  plan
+llama   0.05 aot_eager stock            1145.9   +0.0%    873.3   -0.2%     -2.0  1.000     +0.00      +nan  stock
+llama   0.05 aot_eager unconstrained     769.9  -32.8%    921.6   +5.3%    +46.2  0.425    +46.10      +nan  mm[2048, 256]<-[mul(mm+silu)] x32 @0.75
+llama   0.05 aot_eager stock (again)    1145.9   +0.0%    877.3   +0.2%     +2.0  1.000     -0.82      +nan  stock
+             aot_eager stock drift                                +0.5%
+llama   0.05 inductor  stock             904.6   +0.0%    810.8   -0.0%     -0.2  1.000     +0.00      +nan  stock
+llama   0.05 inductor  unconstrained     691.6  -23.5%    852.9   +5.2%    +42.0  0.403    +40.13      +nan  mm[2048, 256]<-[mul(div+mm)] x32 @0.75
+llama   0.05 inductor  stock (again)     904.6   +0.0%    811.1   +0.0%     +0.2  1.000     -0.59      +nan  stock
+             inductor  stock drift                                +0.0%
+llama   0.15 aot_eager stock             275.3   +0.0%    838.3   -0.2%     -1.4  1.000     +0.00     +0.00  stock
+llama   0.15 aot_eager retain>=0.90      247.4  -10.1%    839.7   +0.0%     +0.1  0.999    +10.31    +10.37  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+whe
+llama   0.15 aot_eager stock (again)     275.3   +0.0%    841.0   +0.2%     +1.4  1.000     +0.60     +0.87  stock
+             aot_eager stock drift                                +0.3%
+llama   0.15 inductor  stock             384.1   +0.0%    774.8   +0.1%     +0.6  1.000     +0.00     +0.00  stock
+llama   0.15 inductor  retain>=0.90      365.9   -4.7%    774.2   +0.0%     +0.0  1.000     +5.16     +4.32  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+whe
+llama   0.15 inductor  stock (again)     384.1   +0.0%    773.5   -0.1%     -0.6  1.000     -0.22     -0.78  stock
+             inductor  stock drift                                -0.2%
+bert    0.05 aot_eager stock             428.1   +0.0%    430.0   -0.5%     -2.4  1.000     +0.00     +0.00  stock
+bert    0.05 aot_eager retain>=0.90      230.8  -46.1%    435.4   +0.7%     +3.1  0.940     +8.23     +0.87  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @0.5
+bert    0.05 aot_eager stock (again)     428.1   +0.0%    434.7   +0.5%     +2.4  1.000     +7.98     +0.44  stock
+             aot_eager stock drift                                +1.1%
+bert    0.05 inductor  stock             475.0   +0.0%    331.5   +0.1%     +0.4  1.000     +0.00     +0.00  stock
+bert    0.05 inductor  retain>=0.90      456.1   -4.0%    336.3   +1.6%     +5.3  1.000    -10.47    -22.21  addmm[2048, 192]<-[bmm(addmm+mul)] x32 @0.5; prims.inductor_lookup_see
+bert    0.05 inductor  stock (again)     475.0   +0.0%    330.7   -0.1%     -0.4  1.000     -1.21     -3.94  stock
+             inductor  stock drift                                -0.2%
+
+C1 efficacy under Inductor (Llama 0.05, >=10% lower peak): PASS
+C2 safety under Inductor (no plan >1% above stock): PASS
+Oracle == module handed to Inductor: PASS
+C3/C4: see table. Δstep ms is measured; Δprof/Δreal are estimated recompute ms added vs stock.
+wrote experiments/liveness/results/expc_runtime_quick.json; no repository files modified.

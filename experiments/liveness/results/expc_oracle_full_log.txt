@@ -1,0 +1,75 @@
+[llama nat 0.05]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W1002 08:32:48.475000 22711 .venv-cuda/lib/python3.12/site-packages/torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+   measured=904.1MB  fx_walk=1149.9MB  inductor_est=906.4MB (fw 85.655952, bw 906.428928)  saved_w=0.0496  mlp_saved=0  compile=118s
+[llama nat 0.10]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=584.0MB  fx_walk=586.3MB  inductor_est=578.9MB (fw 136.380912, bw 578.882048)  saved_w=0.0981  mlp_saved=18  compile=138s
+[llama nat 0.15]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=383.6MB  fx_walk=271.5MB  inductor_est=378.0MB (fw 186.843632, bw 378.014208)  saved_w=0.1502  mlp_saved=32  compile=132s
+[llama nat 0.20]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=415.1MB  fx_walk=312.0MB  inductor_est=410.1MB (fw 242.024944, bw 410.110464)  saved_w=0.2008  mlp_saved=32  compile=132s
+[llama nat 0.25]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=438.8MB  fx_walk=352.5MB  inductor_est=433.8MB (fw 297.206256, bw 433.801728)  saved_w=0.2514  mlp_saved=32  compile=128s
+[llama nat 0.30]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=473.7MB  fx_walk=395.2MB  inductor_est=468.1MB (fw 352.51864, bw 468.126208)  saved_w=0.3022  mlp_saved=32  compile=125s
+[llama nat 0.35]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=496.8MB  fx_walk=435.7MB  inductor_est=491.8MB (fw 407.699952, bw 491.817472)  saved_w=0.3528  mlp_saved=32  compile=123s
+[llama 0.15 force-out MLP]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=950.4MB  fx_walk=1122.3MB  inductor_est=944.1MB (fw 193.135088, bw 944.122368)  saved_w=0.1502  mlp_saved=0  compile=124s
+[llama 0.05 MLP-only (over budget, DP at capacity 0)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=555.6MB  fx_walk=583.3MB  inductor_est=552.3MB (fw 92.915712, bw 552.346112)  saved_w=0.0621  mlp_saved=32  compile=124s
+[llama 0.05 force-in 8 MLP]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=846.2MB  fx_walk=1019.8MB  inductor_est=842.5MB (fw 85.131536, bw 842.490368)  saved_w=0.0491  mlp_saved=8  compile=126s
+[llama 0.05 force-in 16 MLP]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=766.4MB  fx_walk=889.8MB  inductor_est=765.9MB (fw 84.60712, bw 765.94432)  saved_w=0.0486  mlp_saved=16  compile=127s
+[llama 0.05 force-in 24 MLP]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=670.7MB  fx_walk=759.8MB  inductor_est=672.9MB (fw 84.082704, bw 672.8832)  saved_w=0.0482  mlp_saved=24  compile=126s
+[llama 0.05 no-reorder]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=1145.2MB  fx_walk=1412.2MB  inductor_est=1137.6MB (fw 85.655952, bw 1137.607168)  saved_w=0.0496  mlp_saved=0  compile=125s
+[llama 0.15 no-reorder]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=1011.5MB  fx_walk=1412.2MB  inductor_est=1004.5MB (fw 186.843632, bw 1004.54656)  saved_w=0.1502  mlp_saved=32  compile=135s
+[bert nat 0.05]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=476.4MB  fx_walk=444.0MB  inductor_est=529.1MB (fw 206.101256, bw 529.103112)  saved_w=0.0494  mlp_saved=0  compile=227s
+[bert nat 0.10]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=576.0MB  fx_walk=574.5MB  inductor_est=626.6MB (fw 336.648968, bw 626.62068)  saved_w=0.0988  mlp_saved=0  compile=283s
+[bert nat 0.15]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=668.3MB  fx_walk=678.3MB  inductor_est=721.0MB (fw 462.478088, bw 720.99252)  saved_w=0.1488  mlp_saved=0  compile=318s
+
+==========================================================================================
+fx_walk_MB       Spearman=+0.995  median rel err=18.9%  contrast misses=0  RANK PASS
+inductor_est_MB  Spearman=+1.000  median rel err=0.7%  contrast misses=0  RANK PASS
+BERT (measured, fx_walk, inductor_est): [(0.05, 476.4, 444.0, 529.1), (0.1, 576.0, 574.5, 626.6), (0.15, 668.3, 678.3, 721.0)]
+wrote experiments/liveness/results/expc_oracle_full.json; no repository files modified.

@@ -1,0 +1,110 @@
+[
+ {
+  "plan": "bert nat 0.05",
+  "model": "bert",
+  "budget": 0.05,
+  "backend": "inductor",
+  "device": "cuda",
+  "compile_s": 208.68979585799997,
+  "max_memory": 0.05,
+  "n_candidates": 515,
+  "n_mlp_candidates": 0,
+  "n_forced": 0,
+  "saved_weight": 0.049391004857723575,
+  "runtime_saved": 47966060544.0,
+  "stock_runtime_saved": 47966060544.0,
+  "mlp_saved": 0,
+  "saved_ops": {
+   "addmm": 39,
+   "bmm": 32
+  },
+  "candidate_ops": {
+   "bmm": 64,
+   "addmm": 192,
+   "amax": 32,
+   "sum": 32,
+   "var_mean": 65,
+   "any": 32,
+   "ge": 1,
+   "prims.inductor_lookup_seed.default": 97
+  },
+  "fx_walk_MB": 443.965704,
+  "fx_walk_bw_newalloc_MB": 365.322504,
+  "inductor_est_fw_MB": 206.101256,
+  "inductor_est_bw_MB": 529.103112,
+  "inductor_est_MB": 529.103112,
+  "measured_peak_MB": 474.955776
+ },
+ {
+  "plan": "bert nat 0.10",
+  "model": "bert",
+  "budget": 0.1,
+  "backend": "inductor",
+  "device": "cuda",
+  "compile_s": 268.07976053600004,
+  "max_memory": 0.1,
+  "n_candidates": 515,
+  "n_mlp_candidates": 0,
+  "n_forced": 0,
+  "saved_weight": 0.09878200971544715,
+  "runtime_saved": 60498640896.0,
+  "stock_runtime_saved": 60498640896.0,
+  "mlp_saved": 0,
+  "saved_ops": {
+   "addmm": 59,
+   "bmm": 32
+  },
+  "candidate_ops": {
+   "bmm": 64,
+   "addmm": 192,
+   "amax": 32,
+   "sum": 32,
+   "var_mean": 65,
+   "any": 32,
+   "ge": 1,
+   "prims.inductor_lookup_seed.default": 97
+  },
+  "fx_walk_MB": 574.513416,
+  "fx_walk_bw_newalloc_MB": 365.322504,
+  "inductor_est_fw_MB": 336.648968,
+  "inductor_est_bw_MB": 626.62068,
+  "inductor_est_MB": 626.62068,
+  "measured_peak_MB": 574.570496
+ },
+ {
+  "plan": "bert nat 0.15",
+  "model": "bert",
+  "budget": 0.15,
+  "backend": "inductor",
+  "device": "cuda",
+  "compile_s": 304.476883587,
+  "max_memory": 0.15,
+  "n_candidates": 515,
+  "n_mlp_candidates": 0,
+  "n_forced": 0,
+  "saved_weight": 0.14876808692085414,
+  "runtime_saved": 73182216192.0,
+  "stock_runtime_saved": 73182216192.0,
+  "mlp_saved": 0,
+  "saved_ops": {
+   "addmm": 122,
+   "bmm": 32
+  },
+  "candidate_ops": {
+   "bmm": 64,
+   "addmm": 192,
+   "amax": 32,
+   "sum": 32,
+   "var_mean": 65,
+   "any": 32,
+   "ge": 1,
+   "prims.inductor_lookup_seed.default": 97
+  },
+  "fx_walk_MB": 678.32244,
+  "fx_walk_bw_newalloc_MB": 365.322504,
+  "inductor_est_fw_MB": 462.478088,
+  "inductor_est_bw_MB": 720.99252,
+  "inductor_est_MB": 720.99252,
+  "measured_peak_MB": 666.845184
+ }
+]

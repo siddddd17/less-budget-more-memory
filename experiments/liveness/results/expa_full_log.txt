@@ -1,0 +1,48 @@
+[llama nat 0.05]
+   measured=1145.4MB  static=1139.4MB (bw 1139.4, recomputed-live@peak 1068.7)  closure_max=65  KE=0.1861  saved_w=0.0486  mlp_saved=0  saved_ops={'_scaled_dot_product_efficient_attention': 26, 'bmm': 1}
+[llama nat 0.10]
+   measured=508.2MB  static=506.1MB (bw 506.1, recomputed-live@peak 422.8)  closure_max=6  KE=0.1113  saved_w=0.0979  mlp_saved=21  saved_ops={'_scaled_dot_product_efficient_attention': 32, 'mm': 21, 'bmm': 1}
+[llama nat 0.15]
+   measured=274.8MB  static=274.2MB (bw 274.2, recomputed-live@peak 159.8)  closure_max=2  KE=0.1627  saved_w=0.1493  mlp_saved=32  saved_ops={'mm': 46, '_scaled_dot_product_efficient_attention': 32, 'bmm': 1}
+[llama nat 0.20]
+   measured=325.2MB  static=324.0MB (bw 324.0, recomputed-live@peak 159.8)  closure_max=2  KE=0.2129  saved_w=0.1996  mlp_saved=32  saved_ops={'mm': 67, '_scaled_dot_product_efficient_attention': 32}
+[llama nat 0.25]
+   measured=359.4MB  static=359.4MB (bw 359.4, recomputed-live@peak 159.8)  closure_max=2  KE=0.2635  saved_w=0.2501  mlp_saved=32  saved_ops={'_scaled_dot_product_efficient_attention': 32, 'mm': 105, 'bmm': 1}
+[llama nat 0.30]
+   measured=411.1MB  static=409.2MB (bw 409.2, recomputed-live@peak 159.8)  closure_max=2  KE=0.3137  saved_w=0.3004  mlp_saved=32  saved_ops={'mm': 126, '_scaled_dot_product_efficient_attention': 32}
+[llama nat 0.35]
+   measured=456.6MB  static=454.7MB (bw 454.7, recomputed-live@peak 159.8)  closure_max=2  KE=0.3640  saved_w=0.3506  mlp_saved=32  saved_ops={'mm': 152, '_scaled_dot_product_efficient_attention': 32, 'bmm': 1}
+[llama 0.15 force-out MLP]
+   measured=1136.1MB  static=1132.8MB (bw 1132.8, recomputed-live@peak 969.0)  closure_max=6  KE=0.1627  saved_w=0.1493  mlp_saved=0  saved_ops={'mm': 46, '_scaled_dot_product_efficient_attention': 32, 'bmm': 1}
+[llama 0.05 force-in all MLP (over budget)]
+   measured=583.4MB  static=583.3MB (bw 583.3, recomputed-live@peak 566.6)  closure_max=5  KE=0.0706  saved_w=0.0585  mlp_saved=32  saved_ops={'mm': 32, 'mean': 65, 'ne': 1, 'new_ones': 1}
+[llama 0.05 force-in 8 MLP]
+   measured=1018.0MB  static=1009.4MB (bw 1009.4, recomputed-live@peak 955.4)  closure_max=145  KE=0.3511  saved_w=0.0482  mlp_saved=8  saved_ops={'_scaled_dot_product_efficient_attention': 18, 'mm': 8, 'bmm': 1}
+[llama 0.05 force-in 16 MLP]
+   measured=877.6MB  static=868.8MB (bw 868.8, recomputed-live@peak 829.6)  closure_max=160  KE=0.3806  saved_w=0.0496  mlp_saved=16  saved_ops={'_scaled_dot_product_efficient_attention': 11, 'mm': 16, 'bmm': 1}
+[llama 0.05 force-in 24 MLP]
+   measured=742.9MB  static=738.8MB (bw 738.8, recomputed-live@peak 716.3)  closure_max=80  KE=0.2146  saved_w=0.0492  mlp_saved=24  saved_ops={'_scaled_dot_product_efficient_attention': 3, 'mm': 24, 'bmm': 1}
+[llama 0.05 no-reorder]
+   measured=1427.4MB  static=1412.2MB (bw 1412.2, recomputed-live@peak 1341.5)  closure_max=65  KE=0.1861  saved_w=0.0486  mlp_saved=0  saved_ops={'_scaled_dot_product_efficient_attention': 26, 'bmm': 1}
+[llama 0.15 no-reorder]
+   measured=1433.8MB  static=1412.2MB (bw 1412.2, recomputed-live@peak 1298.8)  closure_max=2  KE=0.1627  saved_w=0.1493  mlp_saved=32  saved_ops={'mm': 46, '_scaled_dot_product_efficient_attention': 32, 'bmm': 1}
+[bert nat 0.05]
+   measured=429.5MB  static=400.4MB (bw 400.4, recomputed-live@peak 234.9)  closure_max=4  KE=0.0721  saved_w=0.0494  mlp_saved=0  saved_ops={'addmm': 39, 'bmm': 32}
+[bert nat 0.10]
+   measured=559.6MB  static=531.0MB (bw 531.0, recomputed-live@peak 234.9)  closure_max=4  KE=0.1215  saved_w=0.0988  mlp_saved=0  saved_ops={'addmm': 59, 'bmm': 32}
+[bert nat 0.15]
+   measured=665.5MB  static=634.8MB (bw 634.8, recomputed-live@peak 234.9)  closure_max=4  KE=0.1691  saved_w=0.1487  mlp_saved=0  saved_ops={'addmm': 122, 'bmm': 32}
+
+Spearman vs measured over 14 plans (non-BERT):
+   static_compare_MB            +0.999
+   closure_max                  +0.559
+   closure_max_w                +0.559
+   closure_sum_w                +0.597
+   knapsack_evaluator_peak      -0.128
+   saved_weight                 -0.619
+median |static-measured|/measured = 0.004
+   reorder ablation @0.05: closure_max 65 -> 65, measured 1145.4 -> 1427.4, static 1139.4 -> 1412.2
+   reorder ablation @0.15: closure_max 2 -> 2, measured 274.8 -> 1433.8, static 274.2 -> 1412.2
+
+PRE-REGISTERED VERDICT: PASS (rho>=0.9, median rel err<=0.15, all 11 available contrasts sign-correct)
+wrote experiments/liveness/results/expa_full.json; no repository files modified.

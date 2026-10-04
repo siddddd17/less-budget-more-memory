@@ -1,0 +1,20 @@
+[bert nat 0.05]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W0929 10:13:52.547000 573 torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+   measured=475.0MB  fx_walk=444.0MB  inductor_est=529.1MB (fw 206.101256, bw 529.103112)  saved_w=0.0494  mlp_saved=0  compile=209s
+[bert nat 0.10]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=574.6MB  fx_walk=574.5MB  inductor_est=626.6MB (fw 336.648968, bw 626.62068)  saved_w=0.0988  mlp_saved=0  compile=268s
+[bert nat 0.15]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   measured=666.8MB  fx_walk=678.3MB  inductor_est=721.0MB (fw 462.478088, bw 720.99252)  saved_w=0.1488  mlp_saved=0  compile=304s
+no non-BERT plans in this run; skipping rank verdicts
+
+==========================================================================================
+fx_walk_MB       Spearman=+1.000  median rel err=1.7%  contrast misses=0  RANK PASS
+inductor_est_MB  Spearman=+1.000  median rel err=9.1%  contrast misses=0  RANK PASS
+BERT (measured, fx_walk, inductor_est): [(0.05, 475.0, 444.0, 529.1), (0.1, 574.6, 574.5, 626.6), (0.15, 666.8, 678.3, 721.0)]
+wrote experiments/liveness/results/expc_oracle_bert.json; no repository files modified.

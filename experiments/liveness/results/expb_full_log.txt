@@ -1,0 +1,209 @@
+[llama 0.05 stock]
+   stock?=True  forced=[]
+   w=0.0486/0.0500  retained=1.000  pred=1139.4MB  meas=1145.4MB  step=873.0ms  invariant=OK  family=19 oracle=19 calls/43.9s
+[llama 0.05 retain>=0.90]
+   stock?=True  forced=[]
+   w=0.0486/0.0500  retained=1.000  pred=1139.4MB  meas=1145.4MB  step=862.8ms  invariant=OK  family=19 oracle=19 calls/43.9s
+[llama 0.05 retain>=0.70]
+   stock?=False  forced=['mm[2048, 256]<-[mul(mm+silu)] x32 @0.25']
+   w=0.0482/0.0500  retained=0.796  pred=1009.4MB  meas=1018.8MB  step=897.7ms  invariant=OK  family=19 oracle=19 calls/43.9s
+[llama 0.05 retain>=0.40]
+   stock?=False  forced=['mm[2048, 256]<-[mul(mm+silu)] x32 @0.75']
+   w=0.0492/0.0500  retained=0.425  pred=765.6MB  meas=769.4MB  step=926.4ms  invariant=OK  family=19 oracle=19 calls/43.9s
+[llama 0.05 unconstrained]
+   stock?=False  forced=['mm[2048, 256]<-[mul(mm+silu)] x32 @0.75']
+   w=0.0492/0.0500  retained=0.425  pred=765.6MB  meas=769.4MB  step=923.4ms  invariant=OK  family=19 oracle=19 calls/43.9s
+[llama 0.10 stock]
+   stock?=True  forced=[]
+   w=0.0979/0.1000  retained=1.000  pred=506.1MB  meas=508.2MB  step=856.6ms  invariant=OK  family=28 oracle=28 calls/69.6s
+[llama 0.10 retain>=0.90]
+   stock?=False  forced=['mm[2048, 256]<-[mul(mm+silu)] x32 @0.75']
+   w=0.0977/0.1000  retained=0.949  pred=492.7MB  meas=494.7MB  step=856.1ms  invariant=OK  family=28 oracle=28 calls/69.6s
+[llama 0.10 retain>=0.70]
+   stock?=False  forced=['mm[2048, 256]<-[mul(mm+silu)] x32 @1']
+   w=0.0992/0.1000  retained=0.839  pred=352.2MB  meas=352.2MB  step=863.1ms  invariant=OK  family=28 oracle=28 calls/69.6s
+[llama 0.10 retain>=0.40]
+   stock?=False  forced=['mm[2048, 256]<-[mul(mm+silu)] x32 @1', 'mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5']
+   w=0.1001/0.1000  retained=0.506  pred=345.1MB  meas=345.2MB  step=898.7ms  invariant=OK  family=28 oracle=28 calls/69.6s
+[llama 0.10 unconstrained]
+   stock?=False  forced=['mm[2048, 256]<-[mul(mm+silu)] x32 @1', 'mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5']
+   w=0.1001/0.1000  retained=0.506  pred=345.1MB  meas=345.2MB  step=913.2ms  invariant=OK  family=28 oracle=28 calls/69.6s
+[llama 0.15 stock]
+   stock?=True  forced=[]
+   w=0.1493/0.1500  retained=1.000  pred=274.2MB  meas=274.8MB  step=841.6ms  invariant=OK  family=21 oracle=21 calls/54.6s
+[llama 0.15 retain>=0.90]
+   stock?=False  forced=['mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5']
+   w=0.1487/0.1500  retained=0.999  pred=246.2MB  meas=246.9MB  step=836.4ms  invariant=OK  family=21 oracle=21 calls/54.6s
+[llama 0.15 retain>=0.70]
+   stock?=False  forced=['mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5']
+   w=0.1487/0.1500  retained=0.999  pred=246.2MB  meas=246.9MB  step=815.9ms  invariant=OK  family=21 oracle=21 calls/54.6s
+[llama 0.15 retain>=0.40]
+   stock?=False  forced=['mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5']
+   w=0.1487/0.1500  retained=0.999  pred=246.2MB  meas=246.9MB  step=848.2ms  invariant=OK  family=21 oracle=21 calls/54.6s
+[llama 0.15 unconstrained]
+   stock?=False  forced=['mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5']
+   w=0.1487/0.1500  retained=0.999  pred=246.2MB  meas=246.9MB  step=846.2ms  invariant=OK  family=21 oracle=21 calls/54.6s
+[llama 0.20 stock]
+   stock?=True  forced=[]
+   w=0.1996/0.2000  retained=1.000  pred=324.0MB  meas=325.2MB  step=837.3ms  invariant=OK  family=23 oracle=23 calls/62.6s
+[llama 0.20 retain>=0.90]
+   stock?=False  forced=['mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1']
+   w=0.1995/0.2000  retained=1.000  pred=271.5MB  meas=274.0MB  step=839.0ms  invariant=OK  family=23 oracle=23 calls/62.6s
+[llama 0.20 retain>=0.70]
+   stock?=False  forced=['mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1']
+   w=0.1995/0.2000  retained=1.000  pred=271.5MB  meas=274.0MB  step=836.6ms  invariant=OK  family=23 oracle=23 calls/62.6s
+[llama 0.20 retain>=0.40]
+   stock?=False  forced=['mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1']
+   w=0.1995/0.2000  retained=1.000  pred=271.5MB  meas=274.0MB  step=828.7ms  invariant=OK  family=23 oracle=23 calls/62.6s
+[llama 0.20 unconstrained]
+   stock?=False  forced=['mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1']
+   w=0.1995/0.2000  retained=1.000  pred=271.5MB  meas=274.0MB  step=816.2ms  invariant=OK  family=23 oracle=23 calls/62.6s
+[llama 0.30 stock]
+   stock?=True  forced=[]
+   w=0.3004/0.3000  retained=1.000  pred=409.2MB  meas=411.1MB  step=882.0ms  invariant=OK  family=27 oracle=27 calls/116.9s
+[llama 0.30 retain>=0.90]
+   stock?=False  forced=['mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1', 'mm[2048, 688]<-[mul(input+mul)] x64 @0.25']
+   w=0.2992/0.3000  retained=0.999  pred=381.3MB  meas=389.1MB  step=827.1ms  invariant=OK  family=27 oracle=27 calls/116.9s
+[llama 0.30 retain>=0.70]
+   stock?=False  forced=['mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1', 'mm[2048, 688]<-[mul(input+mul)] x64 @0.25']
+   w=0.2992/0.3000  retained=0.999  pred=381.3MB  meas=389.1MB  step=1023.2ms  invariant=OK  family=27 oracle=27 calls/116.9s
+[llama 0.30 retain>=0.40]
+   stock?=False  forced=['mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1', 'mm[2048, 688]<-[mul(input+mul)] x64 @0.25']
+   w=0.2992/0.3000  retained=0.999  pred=381.3MB  meas=389.1MB  step=831.5ms  invariant=OK  family=27 oracle=27 calls/116.9s
+[llama 0.30 unconstrained]
+   stock?=False  forced=['mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1', 'mm[2048, 688]<-[mul(input+mul)] x64 @0.25']
+   w=0.2992/0.3000  retained=0.999  pred=381.3MB  meas=389.1MB  step=821.1ms  invariant=OK  family=27 oracle=27 calls/116.9s
+[bert 0.05 stock]
+   stock?=True  forced=[]
+   w=0.0494/0.0500  retained=1.000  pred=400.4MB  meas=429.5MB  step=434.9ms  invariant=OK  family=31 oracle=31 calls/210.4s
+[bert 0.05 retain>=0.90]
+   stock?=False  forced=['native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @0.5']
+   w=0.0500/0.0500  retained=0.940  pred=208.3MB  meas=232.2MB  step=437.9ms  invariant=OK  family=31 oracle=31 calls/210.4s
+[bert 0.05 retain>=0.70]
+   stock?=False  forced=['native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @0.5']
+   w=0.0500/0.0500  retained=0.940  pred=208.3MB  meas=232.2MB  step=542.9ms  invariant=OK  family=31 oracle=31 calls/210.4s
+[bert 0.05 retain>=0.40]
+   stock?=False  forced=['native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @0.5']
+   w=0.0500/0.0500  retained=0.940  pred=208.3MB  meas=232.2MB  step=445.2ms  invariant=OK  family=31 oracle=31 calls/210.4s
+[bert 0.05 unconstrained]
+   stock?=False  forced=['native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @0.5']
+   w=0.0500/0.0500  retained=0.940  pred=208.3MB  meas=232.2MB  step=492.5ms  invariant=OK  family=31 oracle=31 calls/210.4s
+[bert 0.10 stock]
+   stock?=True  forced=[]
+   w=0.0988/0.1000  retained=1.000  pred=531.0MB  meas=559.6MB  step=472.1ms  invariant=OK  family=51 oracle=51 calls/334.7s
+[bert 0.10 retain>=0.90]
+   stock?=False  forced=['native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1', 'addmm[2048, 768]<-[native_layer_norm(add+input+input)] x32 @0.5']
+   w=0.1005/0.1000  retained=0.908  pred=305.0MB  meas=327.9MB  step=804.8ms  invariant=OK  family=51 oracle=51 calls/334.7s
+[bert 0.10 retain>=0.70]
+   stock?=False  forced=['native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1', 'addmm[2048, 768]<-[native_layer_norm(add+input+input)] x32 @0.5']
+   w=0.1005/0.1000  retained=0.908  pred=305.0MB  meas=327.9MB  step=1037.0ms  invariant=OK  family=51 oracle=51 calls/334.7s
+[bert 0.10 retain>=0.40]
+   stock?=False  forced=['native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1', 'addmm[2048, 768]<-[native_layer_norm(add+input+input)] x32 @0.5']
+   w=0.1005/0.1000  retained=0.908  pred=305.0MB  meas=327.9MB  step=433.9ms  invariant=OK  family=51 oracle=51 calls/334.7s
+[bert 0.10 unconstrained]
+   stock?=False  forced=['native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1', 'addmm[2048, 768]<-[native_layer_norm(add+input+input)] x32 @0.5']
+   w=0.1005/0.1000  retained=0.908  pred=305.0MB  meas=327.9MB  step=639.6ms  invariant=OK  family=51 oracle=51 calls/334.7s
+[bert 0.15 stock]
+   stock?=True  forced=[]
+   w=0.1487/0.1500  retained=1.000  pred=634.8MB  meas=665.5MB  step=955.6ms  invariant=OK  family=33 oracle=33 calls/258.8s
+[bert 0.15 retain>=0.90]
+   stock?=False  forced=['native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1', 'addmm[2048, 192]<-[bmm(addmm+native_dropout)] x32 @0.5']
+   w=0.1499/0.1500  retained=0.922  pred=434.0MB  meas=463.1MB  step=618.4ms  invariant=OK  family=33 oracle=33 calls/258.8s
+[bert 0.15 retain>=0.70]
+   stock?=False  forced=['native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1', 'addmm[2048, 192]<-[bmm(addmm+native_dropout)] x32 @0.5']
+   w=0.1499/0.1500  retained=0.922  pred=434.0MB  meas=463.1MB  step=1206.5ms  invariant=OK  family=33 oracle=33 calls/258.8s
+[bert 0.15 retain>=0.40]
+   stock?=False  forced=['native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1', 'addmm[2048, 192]<-[bmm(addmm+native_dropout)] x32 @0.5']
+   w=0.1499/0.1500  retained=0.922  pred=434.0MB  meas=463.1MB  step=420.6ms  invariant=OK  family=33 oracle=33 calls/258.8s
+[bert 0.15 unconstrained]
+   stock?=False  forced=['native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1', 'addmm[2048, 192]<-[bmm(addmm+native_dropout)] x32 @0.5']
+   w=0.1499/0.1500  retained=0.922  pred=434.0MB  meas=463.1MB  step=420.8ms  invariant=OK  family=33 oracle=33 calls/258.8s
+
+====================================================================================================
+model    bud policy          meas MB Δ vs stock   pred Δ  step Δ retain  w/budget saved MB  plan
+llama   0.05 stock            1145.4      +0.0%    +0.0%   +0.0%  1.000 0.0486/0.05     56.3  stock
+llama   0.05 retain>=0.90     1145.4      +0.0%    +0.0%   -1.2%  1.000 0.0486/0.05     56.3  stock
+llama   0.05 retain>=0.70     1018.8     -11.1%   -11.4%   +2.8%  0.796 0.0482/0.05     55.8  mm[2048, 256]<-[mul(mm+silu)] x32 @0.25
+llama   0.05 retain>=0.40      769.4     -32.8%   -32.8%   +6.1%  0.425 0.0492/0.05     56.9  mm[2048, 256]<-[mul(mm+silu)] x32 @0.75
+llama   0.05 unconstrained     769.4     -32.8%   -32.8%   +5.8%  0.425 0.0492/0.05     56.9  mm[2048, 256]<-[mul(mm+silu)] x32 @0.75
+llama   0.10 stock             508.2      +0.0%    +0.0%   +0.0%  1.000 0.0979/0.10    113.3  stock
+llama   0.10 retain>=0.90      494.7      -2.7%    -2.7%   -0.1%  0.949 0.0977/0.10    113.1  mm[2048, 256]<-[mul(mm+silu)] x32 @0.75
+llama   0.10 retain>=0.70      352.2     -30.7%   -30.4%   +0.8%  0.839 0.0992/0.10    114.8  mm[2048, 256]<-[mul(mm+silu)] x32 @1
+llama   0.10 retain>=0.40      345.2     -32.1%   -31.8%   +4.9%  0.506 0.1001/0.10    115.9  mm[2048, 256]<-[mul(mm+silu)] x32 @1; mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5
+llama   0.10 unconstrained     345.2     -32.1%   -31.8%   +6.6%  0.506 0.1001/0.10    115.9  mm[2048, 256]<-[mul(mm+silu)] x32 @1; mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5
+llama   0.15 stock             274.8      +0.0%    +0.0%   +0.0%  1.000 0.1493/0.15    172.8  stock
+llama   0.15 retain>=0.90      246.9     -10.2%   -10.2%   -0.6%  0.999 0.1487/0.15    172.0  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5
+llama   0.15 retain>=0.70      246.9     -10.2%   -10.2%   -3.1%  0.999 0.1487/0.15    172.0  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5
+llama   0.15 retain>=0.40      246.9     -10.2%   -10.2%   +0.8%  0.999 0.1487/0.15    172.0  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5
+llama   0.15 unconstrained     246.9     -10.2%   -10.2%   +0.5%  0.999 0.1487/0.15    172.0  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @0.5
+llama   0.20 stock             325.2      +0.0%    +0.0%   +0.0%  1.000 0.1996/0.20    230.9  stock
+llama   0.20 retain>=0.90      274.0     -15.8%   -16.2%   +0.2%  1.000 0.1995/0.20    230.9  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1
+llama   0.20 retain>=0.70      274.0     -15.8%   -16.2%   -0.1%  1.000 0.1995/0.20    230.9  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1
+llama   0.20 retain>=0.40      274.0     -15.8%   -16.2%   -1.0%  1.000 0.1995/0.20    230.9  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1
+llama   0.20 unconstrained     274.0     -15.8%   -16.2%   -2.5%  1.000 0.1995/0.20    230.9  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1
+llama   0.30 stock             411.1      +0.0%    +0.0%   +0.0%  1.000 0.3004/0.30    347.6  stock
+llama   0.30 retain>=0.90      389.1      -5.4%    -6.8%   -6.2%  0.999 0.2992/0.30    346.3  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1; mm[2048, 688]<-[mul(input+mul)] x64 @0.25
+llama   0.30 retain>=0.70      389.1      -5.4%    -6.8%  +16.0%  0.999 0.2992/0.30    346.3  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1; mm[2048, 688]<-[mul(input+mul)] x64 @0.25
+llama   0.30 retain>=0.40      389.1      -5.4%    -6.8%   -5.7%  0.999 0.2992/0.30    346.3  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1; mm[2048, 688]<-[mul(input+mul)] x64 @0.25
+llama   0.30 unconstrained     389.1      -5.4%    -6.8%   -6.9%  0.999 0.2992/0.30    346.3  mm[2048, 256]<-[_scaled_dot_product_efficient_attention(add+add+mm+where)] x32 @1; mm[2048, 688]<-[mul(input+mul)] x64 @0.25
+bert    0.05 stock             429.5      +0.0%    +0.0%   +0.0%  1.000 0.0494/0.05    130.5  stock
+bert    0.05 retain>=0.90      232.2     -45.9%   -48.0%   +0.7%  0.940 0.0500/0.05    107.0  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @0.5
+bert    0.05 retain>=0.70      232.2     -45.9%   -48.0%  +24.8%  0.940 0.0500/0.05    107.0  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @0.5
+bert    0.05 retain>=0.40      232.2     -45.9%   -48.0%   +2.4%  0.940 0.0500/0.05    107.0  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @0.5
+bert    0.05 unconstrained     232.2     -45.9%   -48.0%  +13.3%  0.940 0.0500/0.05    107.0  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @0.5
+bert    0.10 stock             559.6      +0.0%    +0.0%   +0.0%  1.000 0.0988/0.10    261.1  stock
+bert    0.10 retain>=0.90      327.9     -41.4%   -42.6%  +70.5%  0.908 0.1005/0.10    215.5  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1; addmm[2048, 768]<-[native_layer_norm(add+input+input)] x32 @0.5
+bert    0.10 retain>=0.70      327.9     -41.4%   -42.6% +119.6%  0.908 0.1005/0.10    215.5  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1; addmm[2048, 768]<-[native_layer_norm(add+input+input)] x32 @0.5
+bert    0.10 retain>=0.40      327.9     -41.4%   -42.6%   -8.1%  0.908 0.1005/0.10    215.5  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1; addmm[2048, 768]<-[native_layer_norm(add+input+input)] x32 @0.5
+bert    0.10 unconstrained     327.9     -41.4%   -42.6%  +35.5%  0.908 0.1005/0.10    215.5  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1; addmm[2048, 768]<-[native_layer_norm(add+input+input)] x32 @0.5
+bert    0.15 stock             665.5      +0.0%    +0.0%   +0.0%  1.000 0.1487/0.15    393.2  stock
+bert    0.15 retain>=0.90      463.1     -30.4%   -31.6%  -35.3%  0.922 0.1499/0.15    346.0  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1; addmm[2048, 192]<-[bmm(addmm+native_dropout)] x32 @0.5
+bert    0.15 retain>=0.70      463.1     -30.4%   -31.6%  +26.3%  0.922 0.1499/0.15    346.0  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1; addmm[2048, 192]<-[bmm(addmm+native_dropout)] x32 @0.5
+bert    0.15 retain>=0.40      463.1     -30.4%   -31.6%  -56.0%  0.922 0.1499/0.15    346.0  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1; addmm[2048, 192]<-[bmm(addmm+native_dropout)] x32 @0.5
+bert    0.15 unconstrained     463.1     -30.4%   -31.6%  -56.0%  0.922 0.1499/0.15    346.0  native_dropout[2, 1024, 192]<-[addmm(gelu+input+input)] x32 @1; addmm[2048, 192]<-[bmm(addmm+native_dropout)] x32 @0.5
+
+   H3 violated: llama 0.15 retain>=0.90 -10.2%
+   H3 violated: llama 0.15 retain>=0.70 -10.2%
+   H3 violated: llama 0.15 retain>=0.40 -10.2%
+   H3 violated: llama 0.15 unconstrained -10.2%
+   H3 violated: llama 0.2 retain>=0.90 -15.8%
+   H3 violated: llama 0.2 retain>=0.70 -15.8%
+   H3 violated: llama 0.2 retain>=0.40 -15.8%
+   H3 violated: llama 0.2 unconstrained -15.8%
+   H3 violated: llama 0.3 retain>=0.90 -5.4%
+   H3 violated: llama 0.3 retain>=0.70 -5.4%
+   H3 violated: llama 0.3 retain>=0.40 -5.4%
+   H3 violated: llama 0.3 unconstrained -5.4%
+   H4 violated: bert 0.05 stock err=6.8% dm=+0.0% dp=+0.0%
+   H3 violated: bert 0.05 retain>=0.90 -45.9%
+   H4 violated: bert 0.05 retain>=0.90 err=10.3% dm=-45.9% dp=-48.0%
+   H3 violated: bert 0.05 retain>=0.70 -45.9%
+   H4 violated: bert 0.05 retain>=0.70 err=10.3% dm=-45.9% dp=-48.0%
+   H3 violated: bert 0.05 retain>=0.40 -45.9%
+   H4 violated: bert 0.05 retain>=0.40 err=10.3% dm=-45.9% dp=-48.0%
+   H3 violated: bert 0.05 unconstrained -45.9%
+   H4 violated: bert 0.05 unconstrained err=10.3% dm=-45.9% dp=-48.0%
+   H4 violated: bert 0.1 stock err=5.1% dm=+0.0% dp=+0.0%
+   H3 violated: bert 0.1 retain>=0.90 -41.4%
+   H4 violated: bert 0.1 retain>=0.90 err=7.0% dm=-41.4% dp=-42.6%
+   H3 violated: bert 0.1 retain>=0.70 -41.4%
+   H4 violated: bert 0.1 retain>=0.70 err=7.0% dm=-41.4% dp=-42.6%
+   H3 violated: bert 0.1 retain>=0.40 -41.4%
+   H4 violated: bert 0.1 retain>=0.40 err=7.0% dm=-41.4% dp=-42.6%
+   H3 violated: bert 0.1 unconstrained -41.4%
+   H4 violated: bert 0.1 unconstrained err=7.0% dm=-41.4% dp=-42.6%
+   H4 violated: bert 0.15 stock err=4.6% dm=+0.0% dp=+0.0%
+   H3 violated: bert 0.15 retain>=0.90 -30.4%
+   H4 violated: bert 0.15 retain>=0.90 err=6.3% dm=-30.4% dp=-31.6%
+   H3 violated: bert 0.15 retain>=0.70 -30.4%
+   H4 violated: bert 0.15 retain>=0.70 err=6.3% dm=-30.4% dp=-31.6%
+   H3 violated: bert 0.15 retain>=0.40 -30.4%
+   H4 violated: bert 0.15 retain>=0.40 err=6.3% dm=-30.4% dp=-31.6%
+   H3 violated: bert 0.15 unconstrained -30.4%
+   H4 violated: bert 0.15 unconstrained err=6.3% dm=-30.4% dp=-31.6%
+H1 efficacy   : PASS  ({0.05: True, 0.1: True})
+H3 controls   : FAIL
+H2 safety     : PASS
+H4 prediction : FAIL
+H5 invariant  : PASS
+wrote experiments/liveness/results/expb_full.json; no repository files modified.
