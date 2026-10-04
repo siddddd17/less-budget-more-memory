@@ -1,0 +1,56 @@
+[llama 0.00 inductor | stock]
+W1003 16:49:56.011000 39681 .venv-cuda/lib/python3.12/site-packages/torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+   peak=1141.8MB step=871.7ms compile=92s
+[llama 0.01 inductor | stock]
+   peak=1103.6MB step=860.7ms compile=106s
+[llama 0.02 inductor | stock]
+   peak=1051.9MB step=849.0ms compile=104s
+[llama 0.03 inductor | stock]
+   peak=1004.6MB step=835.5ms compile=106s
+[llama 0.05 inductor | stock]
+   peak=904.1MB step=812.9ms compile=107s
+[llama 0.10 inductor | stock]
+   peak=584.0MB step=784.2ms compile=111s
+[llama 0.11 inductor | stock]
+   peak=483.1MB step=781.3ms compile=111s
+[llama 0.12 inductor | stock]
+   peak=401.5MB step=779.0ms compile=117s
+[llama 0.13 inductor | stock]
+   peak=363.3MB step=776.5ms compile=115s
+[llama 0.14 inductor | stock]
+   peak=369.6MB step=776.0ms compile=121s
+[llama 0.15 inductor | stock]
+   peak=383.6MB step=774.8ms compile=115s
+[llama 0.16 inductor | stock]
+   peak=389.9MB step=774.1ms compile=116s
+[llama 0.17 inductor | stock]
+   peak=396.9MB step=773.5ms compile=131s
+[llama 0.18 inductor | stock]
+   peak=398.9MB step=772.1ms compile=117s
+[llama 0.19 inductor | stock]
+   peak=413.0MB step=769.8ms compile=116s
+[llama 0.20 inductor | stock]
+   peak=415.1MB step=769.5ms compile=115s
+[llama 0.30 inductor | stock]
+   peak=473.7MB step=758.4ms compile=110s
+[llama 1.00 inductor | stock]
+   peak=1109.9MB step=713.1ms compile=73s
+[bert 0.01 inductor | stock]
+   peak=2071.4MB step=350.0ms compile=167s
+[bert 0.02 inductor | stock]
+   peak=828.7MB step=338.5ms compile=168s
+[bert 0.03 inductor | stock]
+   peak=609.1MB step=339.3ms compile=232s
+[bert 0.05 inductor | stock]
+   peak=476.4MB step=338.8ms compile=238s
+[bert 0.10 inductor | stock]
+   peak=576.0MB step=330.0ms compile=282s
+[bert 0.15 inductor | stock]
+   peak=668.8MB step=317.2ms compile=313s
+[bert 1.00 inductor | stock]
+   peak=2679.1MB step=272.7ms compile=117s
+
+llama: lowest stock peak 363.3 MB at budget 0.13  |  0.00:1142  0.01:1104  0.02:1052  0.03:1005  0.05:904  0.10:584  0.11:483  0.12:401  0.13:363  0.14:370  0.15:384  0.16:390  0.17:397  0.18:399  0.19:413  0.20:415  0.30:474  1.00:1110
+bert: lowest stock peak 476.4 MB at budget 0.05  |  0.01:2071  0.02:829  0.03:609  0.05:476  0.10:576  0.15:669  1.00:2679
+wrote experiments/liveness/results/stock_grid.json
+=== 17:55 stock_grid exit 0
