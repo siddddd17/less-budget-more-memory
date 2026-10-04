@@ -1,0 +1,77 @@
+n=163 candidates {'mm': 113, '_scaled_dot_product_flash_attention_for_cpu': 16, 'mean': 33, 'nll_loss_forward': 1}
+early-return thresholds: more_aggressive ratio 0.726, aggressive ratio 0.672
+all-banned (aggressive min-cut): peak 102.23MB  R 0.000GF
+b=0.05 stock  148.00MB R=14.019GF | ours   95.21MB R=15.165GF calls=5 6.5s | stock+light   81.38 (8.9s) | stock+all   55.89 | ours+light   65.26
+b=0.10 stock   66.58MB R=11.230GF | ours   59.40MB R=11.671GF calls=6 8.9s | stock+light   57.83 (3.3s) | stock+all   55.89 | ours+light   57.83
+b=0.15 stock   61.17MB R=9.720GF | ours   59.44MB R=9.720GF calls=5 7.0s | stock+light   59.59 (3.1s) | stock+all   58.55 | ours+light   57.87
+b=0.20 stock   65.20MB R=8.781GF | ours   59.40MB R=8.781GF calls=5 7.6s | stock+light   63.62 (3.0s) | stock+all   62.22 | ours+light   57.83
+b=0.30 stock   70.83MB R=6.919GF | ours   59.40MB R=6.921GF calls=5 8.1s | stock+light   69.25 (3.4s) | stock+all   67.85 | ours+light   57.83
+greedy selector (lazy) to convergence ...
+   [greedy-lazy] step   1 drop #129 peak   102.23MB  R    0.000GF  score 0 F/B  calls 164  full 1   112.0s
+   [greedy-lazy] step   2 drop #130 peak   102.22MB  R    0.000GF  score 0 F/B  calls 176  full 1   119.8s
+   [greedy-lazy] step   3 drop #131 peak   102.22MB  R    0.000GF  score 0 F/B  calls 188  full 1   128.3s
+   [greedy-lazy] step   4 drop #132 peak   102.22MB  R    0.000GF  score 0 F/B  calls 200  full 1   135.8s
+   [greedy-lazy] step   5 drop #133 peak   102.22MB  R    0.000GF  score 0 F/B  calls 212  full 1   144.6s
+   [greedy-lazy] step   6 drop #134 peak   102.22MB  R    0.000GF  score 0 F/B  calls 224  full 1   152.8s
+   [greedy-lazy] step   7 drop #135 peak   102.21MB  R    0.000GF  score 0 F/B  calls 236  full 1   161.7s
+   [greedy-lazy] step   8 drop #136 peak   102.21MB  R    0.000GF  score 0 F/B  calls 248  full 1   169.3s
+   [greedy-lazy] step   9 drop #137 peak   102.21MB  R    0.000GF  score 0 F/B  calls 260  full 1   178.1s
+   [greedy-lazy] step  10 drop #138 peak   102.21MB  R    0.000GF  score 0 F/B  calls 272  full 1   186.2s
+   [greedy-lazy] step  11 drop #139 peak   102.21MB  R    0.000GF  score 0 F/B  calls 284  full 1   194.9s
+   [greedy-lazy] step  12 drop #140 peak   102.20MB  R    0.000GF  score 0 F/B  calls 296  full 1   202.5s
+   [greedy-lazy] step  13 drop #141 peak   102.20MB  R    0.000GF  score 0 F/B  calls 308  full 1   211.7s
+   [greedy-lazy] step  14 drop #142 peak   102.20MB  R    0.000GF  score 0 F/B  calls 320  full 1   219.3s
+   [greedy-lazy] step  15 drop #143 peak   102.20MB  R    0.000GF  score 0 F/B  calls 332  full 1   228.4s
+   [greedy-lazy] step  16 drop #144 peak   102.20MB  R    0.000GF  score 0 F/B  calls 344  full 1   236.5s
+   [greedy-lazy] step  17 drop #145 peak   102.19MB  R    0.000GF  score 0 F/B  calls 356  full 1   245.6s
+   [greedy-lazy] step  18 drop #146 peak   102.19MB  R    0.000GF  score 0 F/B  calls 368  full 1   253.6s
+   [greedy-lazy] step  19 drop #147 peak   102.19MB  R    0.000GF  score 0 F/B  calls 380  full 1   262.1s
+   [greedy-lazy] step  20 drop #148 peak   102.19MB  R    0.000GF  score 0 F/B  calls 392  full 1   270.2s
+   [greedy-lazy] step  21 drop #149 peak   102.19MB  R    0.000GF  score 0 F/B  calls 404  full 1   279.0s
+   [greedy-lazy] step  22 drop #150 peak   102.18MB  R    0.000GF  score 0 F/B  calls 416  full 1   287.1s
+   [greedy-lazy] step  23 drop #151 peak   102.18MB  R    0.000GF  score 0 F/B  calls 428  full 1   296.5s
+   [greedy-lazy] step  24 drop #152 peak   102.18MB  R    0.000GF  score 0 F/B  calls 440  full 1   305.4s
+   [greedy-lazy] step  25 drop #153 peak   102.18MB  R    0.000GF  score 0 F/B  calls 452  full 1   313.9s
+   [greedy-lazy] step  26 drop #154 peak   102.18MB  R    0.000GF  score 0 F/B  calls 464  full 1   322.7s
+   [greedy-lazy] step  27 drop #155 peak   102.17MB  R    0.000GF  score 0 F/B  calls 476  full 1   331.4s
+   [greedy-lazy] step  28 drop #156 peak   102.17MB  R    0.000GF  score 0 F/B  calls 488  full 1   340.2s
+   [greedy-lazy] step  29 drop #157 peak   102.17MB  R    0.000GF  score 0 F/B  calls 500  full 1   348.8s
+   [greedy-lazy] step  30 drop #158 peak   102.17MB  R    0.000GF  score 0 F/B  calls 512  full 1   357.9s
+   [greedy-lazy] step  31 drop #159 peak   102.17MB  R    0.000GF  score 0 F/B  calls 524  full 1   368.2s
+   [greedy-lazy] step  32 drop #160 peak   102.16MB  R    0.000GF  score 0 F/B  calls 536  full 1   376.0s
+   [greedy-lazy] step  33 drop #  1 peak   100.75MB  R    0.180GF  score 128 F/B  calls 548  full 1   385.3s
+   [greedy-lazy] step  34 drop #  2 peak    99.35MB  R    0.361GF  score 128 F/B  calls 560  full 1   393.7s
+   [greedy-lazy] step  35 drop #  3 peak    97.94MB  R    0.541GF  score 128 F/B  calls 572  full 1   402.6s
+   [greedy-lazy] step  36 drop #  4 peak    96.53MB  R    0.721GF  score 128 F/B  calls 584  full 1   411.0s
+   [greedy-lazy] step  37 drop #  5 peak    95.12MB  R    0.902GF  score 128 F/B  calls 596  full 1   420.5s
+   [greedy-lazy] step  38 drop #  6 peak    93.71MB  R    1.082GF  score 128 F/B  calls 608  full 1   428.8s
+   [greedy-lazy] step  39 drop #  7 peak    92.30MB  R    1.262GF  score 128 F/B  calls 620  full 1   438.3s
+   [greedy-lazy] step  40 drop #  8 peak    90.89MB  R    1.443GF  score 128 F/B  calls 632  full 1   446.3s
+   [greedy-lazy] step  41 drop #  9 peak    89.48MB  R    1.623GF  score 128 F/B  calls 644  full 1   455.7s
+   [greedy-lazy] step  42 drop # 10 peak    88.07MB  R    1.804GF  score 128 F/B  calls 656  full 1   463.3s
+   [greedy-lazy] step  43 drop # 11 peak    86.66MB  R    1.984GF  score 128 F/B  calls 668  full 1   472.5s
+   [greedy-lazy] step  44 drop # 12 peak    85.26MB  R    2.164GF  score 128 F/B  calls 680  full 1   481.1s
+   [greedy-lazy] step  45 drop # 13 peak    83.85MB  R    2.345GF  score 128 F/B  calls 692  full 1   490.4s
+   [greedy-lazy] step  46 drop # 14 peak    82.44MB  R    2.525GF  score 128 F/B  calls 704  full 1   498.2s
+   [greedy-lazy] step  47 drop # 15 peak    81.03MB  R    2.705GF  score 128 F/B  calls 716  full 1   506.9s
+   [greedy-lazy] step  48 drop # 16 peak    79.62MB  R    2.886GF  score 128 F/B  calls 728  full 1   515.3s
+   [greedy-lazy] step  49 drop # 17 peak    78.21MB  R    3.066GF  score 128 F/B  calls 740  full 1   523.7s
+   [greedy-lazy] step  50 drop # 18 peak    76.80MB  R    3.246GF  score 128 F/B  calls 752  full 1   533.3s
+   [greedy-lazy] step  51 drop # 19 peak    75.39MB  R    3.427GF  score 128 F/B  calls 764  full 1   540.9s
+   [greedy-lazy] step  52 drop # 20 peak    73.98MB  R    3.607GF  score 128 F/B  calls 776  full 1   549.7s
+   [greedy-lazy] step  53 drop # 21 peak    72.57MB  R    3.787GF  score 128 F/B  calls 788  full 1   557.7s
+   [greedy-lazy] step  54 drop # 22 peak    71.16MB  R    3.968GF  score 128 F/B  calls 800  full 1   566.1s
+   [greedy-lazy] step  55 drop # 23 peak    69.76MB  R    4.148GF  score 128 F/B  calls 812  full 1   575.4s
+   [greedy-lazy] step  56 drop # 24 peak    68.35MB  R    4.329GF  score 128 F/B  calls 824  full 1   583.2s
+   [greedy-lazy] step  57 drop # 25 peak    66.94MB  R    4.509GF  score 128 F/B  calls 836  full 1   592.0s
+   [greedy-lazy] step  58 drop # 26 peak    65.53MB  R    4.689GF  score 128 F/B  calls 848  full 1   600.2s
+   [greedy-lazy] step  59 drop # 27 peak    64.12MB  R    4.870GF  score 128 F/B  calls 860  full 1   609.1s
+   [greedy-lazy] step  60 drop # 28 peak    62.71MB  R    5.050GF  score 128 F/B  calls 872  full 1   618.4s
+   [greedy-lazy] step  61 drop # 29 peak    61.30MB  R    5.230GF  score 128 F/B  calls 884  full 1   627.2s
+   [greedy-lazy] step  62 drop # 49 peak    60.78MB  R    5.297GF  score 128 F/B  calls 896  full 1   636.2s
+   [greedy-lazy] step  63 drop # 50 peak    60.25MB  R    5.365GF  score 128 F/B  calls 908  full 1   645.7s
+   [greedy-lazy] step  64 drop # 51 peak    59.73MB  R    5.432GF  score 128 F/B  calls 920  full 1   653.7s
+   [greedy-lazy] step  65 drop #101 peak    59.40MB  R    5.499GF  score 205 F/B  calls 932  full 1   662.4s
+   [greedy-lazy] step  66 drop # 33 peak    58.86MB  R    5.767GF  score 496 F/B  calls 1030  full 2   730.0s
+greedy-lazy final: peak 58.86MB R=5.767GF steps=66 calls=1127 730.0s converged=True; +light 58.33MB R=5.767GF; +all 58.33MB R=7.571GF
+done in 979s -> experiments/liveness/results/greedy_race_toy.json

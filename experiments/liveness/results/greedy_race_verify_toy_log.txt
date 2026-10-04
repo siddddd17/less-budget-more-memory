@@ -1,0 +1,5 @@
+toy  stock@0.05         oracle-pred  148.005MB  emitted-static  148.005MB  MATCH  | bw new-alloc static  140.976MB measured  140.976MB  (+0.00%)
+toy  ours@0.05          oracle-pred   95.209MB  emitted-static   95.209MB  MATCH  | bw new-alloc static   95.142MB measured   95.142MB  (+0.00%)
+toy  stock@0.05+light   oracle-pred   81.379MB  emitted-static   81.379MB  MATCH  | bw new-alloc static   74.351MB measured   74.351MB  (+0.00%)
+toy  greedy final       oracle-pred   58.861MB  emitted-static   58.861MB  MATCH  | bw new-alloc static   58.861MB measured   58.861MB  (+0.00%)
+toy  greedy final+light oracle-pred   58.329MB  emitted-static   58.329MB  MATCH  | bw new-alloc static   57.812MB measured   57.812MB  (+0.00%)
