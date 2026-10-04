@@ -1,0 +1,21 @@
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W0930 17:41:38.821000 13981 torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+<repo>/experiments/liveness/check_grad_consistency.py:99: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  out = dict(L0=float(L0), repro=abs(L0b - float(L0)))
+dropout OFF, budget 1.0 (control)          L0=-4.658743e+00 reseed_repro=0.0e+00  raw=6.0e-03/1.5e-03/3.8e-04  richardson=1.5e-05/1.8e-06  random ops fw=0 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+dropout OFF, budget 0.05 stock             L0=-4.658743e+00 reseed_repro=0.0e+00  raw=6.0e-03/1.5e-03/3.8e-04  richardson=1.5e-05/2.0e-06  random ops fw=0 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+dropout ON,  budget 1.0 (control)          L0=-4.439613e+00 reseed_repro=0.0e+00  raw=5.5e-03/1.4e-03/3.5e-04  richardson=1.3e-05/2.1e-06  random ops fw=195 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+dropout ON,  budget 0.05 stock             L0=-4.439613e+00 reseed_repro=0.0e+00  raw=6.0e-03/1.9e-03/8.4e-04  richardson=5.1e-04/5.0e-04  random ops fw=195 bw=195
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+dropout ON,  budget 0.05 stock+remat(pw)   L0=-4.439613e+00 reseed_repro=0.0e+00  raw=6.3e-03/2.2e-03/1.2e-03  richardson=8.4e-04/8.3e-04  random ops fw=195 bw=195
+VERDICT dropout ON,  budget 0.05 stock: UNCLEAR (between 10x and 100x of the control 1.3e-05)
+VERDICT dropout ON,  budget 0.05 stock+remat(pw): UNCLEAR (between 10x and 100x of the control 1.3e-05)

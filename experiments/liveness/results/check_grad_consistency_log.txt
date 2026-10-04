@@ -1,0 +1,21 @@
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W0930 16:25:14.433000 13140 torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+<repo>/experiments/liveness/check_grad_consistency.py:87: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  out = dict(L0=float(L0), repro=abs(L0b - float(L0)))
+dropout OFF, budget 1.0 (control)          L0=-2.492666e-04 reseed_repro=0.0e+00  rel_err=9.43e-09 / 1.24e-07  random ops fw=0 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+dropout OFF, budget 0.05 stock             L0=-1.931787e-04 reseed_repro=0.0e+00  rel_err=1.08e-08 / 8.14e-08  random ops fw=0 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+dropout ON,  budget 1.0 (control)          L0=-2.540350e-04 reseed_repro=0.0e+00  rel_err=6.52e-08 / 1.91e-07  random ops fw=195 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+dropout ON,  budget 0.05 stock             L0=-5.570054e-05 reseed_repro=0.0e+00  rel_err=1.95e-04 / 1.95e-04  random ops fw=195 bw=195
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+dropout ON,  budget 0.05 stock+remat(pw)   L0=-5.570054e-05 reseed_repro=0.0e+00  rel_err=1.95e-04 / 1.95e-04  random ops fw=195 bw=195
+VERDICT dropout ON,  budget 0.05 stock: CONSISTENT
+VERDICT dropout ON,  budget 0.05 stock+remat(pw): CONSISTENT

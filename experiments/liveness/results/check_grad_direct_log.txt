@@ -1,0 +1,76 @@
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W0930 18:01:49.685000 14364 torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+<repo>/experiments/liveness/check_grad_direct.py:81: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  return float(L), out, ops
+
+dropout OFF  budget 1.0 (reference)   L=-4.6587434  random ops fw=0 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+dropout OFF  budget 0.05 stock            L=-4.6587434 (same forward: True)  rel_L2=3.22e-07  params with rel diff > 1e-4: 32/517  random ops fw=0 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+      6.15e-01  model.encoder.layer.31.attention.self.key.bias
+      5.49e-01  model.encoder.layer.29.attention.self.key.bias
+      5.21e-01  model.encoder.layer.23.attention.self.key.bias
+      5.12e-01  model.encoder.layer.11.attention.self.key.bias
+      4.97e-01  model.encoder.layer.27.attention.self.key.bias
+      4.93e-01  model.encoder.layer.21.attention.self.key.bias
+      4.92e-01  model.encoder.layer.16.attention.self.key.bias
+      4.71e-01  model.encoder.layer.30.attention.self.key.bias
+      4.52e-01  model.encoder.layer.20.attention.self.key.bias
+      4.49e-01  model.encoder.layer.14.attention.self.key.bias
+      4.43e-01  model.encoder.layer.24.attention.self.key.bias
+      4.42e-01  model.encoder.layer.22.attention.self.key.bias
+dropout OFF  budget 0.05 stock+remat(pw)  L=-4.6587434 (same forward: True)  rel_L2=3.07e-07  params with rel diff > 1e-4: 32/517  random ops fw=0 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+      5.81e-01  model.encoder.layer.31.attention.self.key.bias
+      5.38e-01  model.encoder.layer.23.attention.self.key.bias
+      5.13e-01  model.encoder.layer.29.attention.self.key.bias
+      5.13e-01  model.encoder.layer.16.attention.self.key.bias
+      4.93e-01  model.encoder.layer.8.attention.self.key.bias
+      4.92e-01  model.encoder.layer.13.attention.self.key.bias
+      4.75e-01  model.encoder.layer.28.attention.self.key.bias
+      4.66e-01  model.encoder.layer.24.attention.self.key.bias
+      4.60e-01  model.encoder.layer.27.attention.self.key.bias
+      4.54e-01  model.encoder.layer.14.attention.self.key.bias
+      4.48e-01  model.encoder.layer.21.attention.self.key.bias
+      4.44e-01  model.encoder.layer.3.attention.self.key.bias
+
+dropout ON   budget 1.0 (reference)   L=-4.4396133  random ops fw=195 bw=0
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+dropout ON   budget 0.05 stock            L=-4.4396133 (same forward: True)  rel_L2=2.00e-02  params with rel diff > 1e-4: 516/517  random ops fw=195 bw=195
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+      1.57e+00  model.encoder.layer.14.attention.self.key.bias
+      1.55e+00  model.encoder.layer.16.attention.self.key.bias
+      1.54e+00  model.encoder.layer.12.attention.self.key.bias
+      1.50e+00  model.encoder.layer.18.attention.self.key.bias
+      1.49e+00  model.encoder.layer.1.attention.self.key.bias
+      1.48e+00  model.encoder.layer.31.attention.self.key.bias
+      1.48e+00  model.encoder.layer.9.attention.self.key.bias
+      1.41e+00  model.encoder.layer.0.attention.self.key.bias
+      1.39e+00  model.encoder.layer.19.attention.self.key.bias
+      1.36e+00  model.encoder.layer.11.attention.self.key.bias
+      1.36e+00  model.encoder.layer.27.attention.self.key.bias
+      1.32e+00  model.encoder.layer.20.attention.self.key.bias
+dropout ON   budget 0.05 stock+remat(pw)  L=-4.4396133 (same forward: True)  rel_L2=2.06e-02  params with rel diff > 1e-4: 516/517  random ops fw=195 bw=195
+      1.54e+00  model.encoder.layer.0.attention.self.key.bias
+      1.54e+00  model.encoder.layer.1.attention.self.key.bias
+      1.54e+00  model.encoder.layer.20.attention.self.key.bias
+      1.51e+00  model.encoder.layer.31.attention.self.key.bias
+      1.49e+00  model.encoder.layer.29.attention.self.key.bias
+      1.48e+00  model.encoder.layer.4.attention.self.key.bias
+      1.40e+00  model.encoder.layer.30.attention.self.key.bias
+      1.39e+00  model.encoder.layer.3.attention.self.key.bias
+      1.37e+00  model.encoder.layer.12.attention.self.key.bias
+      1.36e+00  model.encoder.layer.7.attention.self.key.bias
+      1.36e+00  model.encoder.layer.18.attention.self.key.bias
+      1.35e+00  model.encoder.layer.14.attention.self.key.bias
+
+dropout-OFF floor (float noise): 3.22e-07
+VERDICT dropout ON budget 0.05 stock: MISMATCH  (rel_L2 2.00e-02 vs floor 3.22e-07)
+VERDICT dropout ON budget 0.05 stock+remat(pw): MISMATCH  (rel_L2 2.06e-02 vs floor 3.22e-07)

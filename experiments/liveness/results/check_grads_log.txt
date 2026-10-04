@@ -1,0 +1,15 @@
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W1002 09:17:15.709000 24313 .venv-cuda/lib/python3.12/site-packages/torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+stock              vs eager: rel_L2=3.33e-07  worst_tensor=9.70e-07  max_abs=6.25e-02
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+stock (again)      vs eager: rel_L2=3.33e-07  worst_tensor=9.70e-07  max_abs=6.25e-02
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+stock+remat(pw)    vs eager: rel_L2=3.34e-07  worst_tensor=9.74e-07  max_abs=5.47e-02
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+stock+remat(all)   vs eager: rel_L2=3.33e-07  worst_tensor=9.70e-07  max_abs=6.25e-02
+stock vs stock (again): rel_L2=1.19e-09   (Inductor run-to-run noise)
+VERDICT: numerically sound (float-level differences only)

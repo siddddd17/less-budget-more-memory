@@ -1,0 +1,24 @@
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W1001 16:12:04.303000 21223 torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+budget 1.0 ref            L=-4.4396133
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+0.10 stock               L=-4.4396133 same_fwd=True  rel_L2=2.59e-07  CORRECT
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+0.10 stock+remat(pw)     L=-4.4396133 same_fwd=True  rel_L2=2.59e-07  CORRECT  accepted=141 peak 575->417MB(pred)
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+0.10 stock+remat(all)    L=-4.4396133 same_fwd=True  rel_L2=2.78e-07  CORRECT  accepted=143 peak 575->415MB(pred)
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+0.15 stock               L=-4.4396133 same_fwd=True  rel_L2=2.13e-07  CORRECT
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+0.15 stock+remat(pw)     L=-4.4396133 same_fwd=True  rel_L2=2.73e-07  CORRECT  accepted=135 peak 678->521MB(pred)
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+0.15 stock+remat(all)    L=-4.4396133 same_fwd=True  rel_L2=2.75e-07  CORRECT  accepted=135 peak 678->521MB(pred)
+
+VERDICT: 0.10 stock: CORRECT, 0.10 stock+remat(pw): CORRECT, 0.10 stock+remat(all): CORRECT, 0.15 stock: CORRECT, 0.15 stock+remat(pw): CORRECT, 0.15 stock+remat(all): CORRECT

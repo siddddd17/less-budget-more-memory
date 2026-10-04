@@ -1,0 +1,34 @@
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W1001 14:52:02.922000 19832 torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+[1] ON  solver plan: rel_L2=2.02e-02 (WRONG)  same_fwd=True  chosen_is_stock=False
+    RNG probe (advance RNG between fw and bw): grad change 2.16e-07 -> backward does not depend on global RNG
+    solver vs stock: +{'var_mean': 65, 'any': 32, 'amax': 32, 'sum': 32, 'addmm': 16}  -{'addmm': 7}
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+[2] OFF same plan forced: rel_L2=2.91e-07 (CORRECT)  mapped 241/241 saved candidates (of 418 candidates in the OFF graph)
+
+STEP-2 VERDICT: the plan is correct without dropout and the backward does not use the global RNG, so the error needs dropout to be present: masks are regenerated with the right seeds but WRONG values/indexing.
+
+[3] bisection over 5 op classes: ['addmm', 'amax', 'any', 'sum', 'var_mean']
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+    revert addmm                       : rel_L2=2.01e-02 (WRONG)
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+    revert amax                        : rel_L2=2.02e-02 (WRONG)
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+    revert any                         : rel_L2=2.02e-02 (WRONG)
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+    revert sum                         : rel_L2=2.02e-02 (WRONG)
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+    revert var_mean                    : rel_L2=2.70e-07 (CORRECT)   <-- reverting this FIXES it
+
+STEP-3 VERDICT: culprit class(es): var_mean

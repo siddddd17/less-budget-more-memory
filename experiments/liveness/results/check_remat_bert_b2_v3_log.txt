@@ -1,0 +1,11 @@
+W1003 16:22:38.530000 39117 .venv-cuda/lib/python3.12/site-packages/torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+budget 1.0 ref            L=-4.4396133
+0.10 stock               L=-4.4396133 same_fwd=True  rel_L2=2.71e-07  CORRECT
+0.10 stock+remat(pw)     L=-4.4396133 same_fwd=True  rel_L2=2.67e-07  CORRECT  accepted=77 peak 575->442MB(pred) random_ops 97->97
+0.10 stock+remat(all)    L=-4.4396133 same_fwd=True  rel_L2=2.64e-07  CORRECT  accepted=107 peak 575->440MB(pred) random_ops 97->97
+0.15 stock               L=-4.4396133 same_fwd=True  rel_L2=2.55e-07  CORRECT
+0.15 stock+remat(pw)     L=-4.4396133 same_fwd=True  rel_L2=3.00e-07  CORRECT  accepted=71 peak 678->546MB(pred) random_ops 97->97
+0.15 stock+remat(all)    L=-4.4396133 same_fwd=True  rel_L2=2.57e-07  CORRECT  accepted=71 peak 678->546MB(pred) random_ops 97->97
+
+VERDICT: 0.10 stock: CORRECT, 0.10 stock+remat(pw): CORRECT, 0.10 stock+remat(all): CORRECT, 0.15 stock: CORRECT, 0.15 stock+remat(pw): CORRECT, 0.15 stock+remat(all): CORRECT
+=== 16:49 check_remat_bert_b2_v3 exit 0

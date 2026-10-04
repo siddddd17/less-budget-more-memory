@@ -1,0 +1,15 @@
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W1001 13:40:16.847000 19419 torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+budget 1.0 ref   L=-4.4396133  bw random ops={}
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+0.05 stock       L=-4.4396133 same_fwd=True  rel_L2=2.20e-07  bw random ops={'prims.inductor_random.default': 97}
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+0.05 solver      L=-4.4396133 same_fwd=True  rel_L2=2.02e-02  bw random ops={'prims.inductor_random.default': 97}
+   solver: chosen_is_stock=False  added_ops={'addmm': 16, 'amax': 32, 'sum': 32, 'var_mean': 65, 'any': 32}  pred peak 444.0 -> 434.7 MB
+   solver bw ops MORE than stock : {}
+   solver bw ops FEWER than stock: {'aten.expand.default': 12, 'aten.add.Tensor': 65, 'aten.var_mean.correction': 65, '<built-in function getitem>': 130, 'aten.rsqrt.default': 65, 'aten.permute.default': 20, 'aten.addmm.default': 9, 'aten.view.default': 36, 'aten.sum.dim_IntList': 32, 'aten.clone.default': 12, 'aten.mul.Scalar': 8, 'aten.amax.default': 32, 'aten.eq.Scalar': 32, 'aten.logical_not.default': 64, 'aten.any.dim': 32}
+
+VERDICT WRONG-PLAN: solver plan differs (rel_L2 2.02e-02) with the same random ops as stock.

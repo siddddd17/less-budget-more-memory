@@ -1,0 +1,15 @@
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W1001 15:35:36.401000 20797 torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+budget 1.0 ref            L=-4.4396133
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+0.05 stock               L=-4.4396133 same_fwd=True  rel_L2=2.31e-07  CORRECT
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+0.05 stock+remat(pw)     L=-4.4396133 same_fwd=True  rel_L2=2.84e-07  CORRECT  accepted=145 peak 444->287MB(pred)
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+0.05 stock+remat(all)    L=-4.4396133 same_fwd=True  rel_L2=2.56e-07  CORRECT  accepted=147 peak 444->285MB(pred)
+
+VERDICT: 0.05 stock: CORRECT, 0.05 stock+remat(pw): CORRECT, 0.05 stock+remat(all): CORRECT

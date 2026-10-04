@@ -1,0 +1,26 @@
+torch 2.14.0+cu130  device cuda  scale 8  4x path present: True
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W1003 12:20:54.933000 34961 .venv-cuda/lib/python3.12/site-packages/torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+[on] budget 1.0 reference (111s)
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+  [on ] 0.05 stock   rel_L2=2.82e-07 CORRECT peak=474.97MB step=337.3ms
+        probe: bw/2D:tl.randx97, fw/2D:tl.randx97
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+  [on ] 0.05 solver  rel_L2=2.02e-02 WRONG   peak=381.53MB step=327.3ms
+        probe: bw/1D:rand4xx63, bw/2D:tl.randx34, fw/2D:tl.randx97   <-- fw and bw use DIFFERENT random functions
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+[off] budget 1.0 reference (104s)
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+  [off] 0.05 stock   rel_L2=2.52e-07 CORRECT peak=474.97MB step=339.3ms
+        probe: bw/2D:tl.randx97, fw/2D:tl.randx97
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+  [off] 0.05 solver  rel_L2=2.60e-07 CORRECT peak=381.53MB step=325.1ms
+        probe: bw/1D:tl.randx63, bw/2D:tl.randx34, fw/2D:tl.randx97
+
+VERDICT CONFIRMED: solver WRONG with the 4x path on (2.0e-02) and CORRECT with it off (2.6e-07); fw and bw used different random functions. Peak 381.5 -> 381.5 MB, step 327.3 -> 325.1 ms.
