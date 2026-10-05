@@ -1,0 +1,119 @@
+[llama | eager]
+   peak=1421.2MB step=441.6ms compile=4s grad_err=0.0 remat_accepted=None
+[llama | eager+ac1]
+   peak=122.3MB step=562.1ms compile=1s grad_err=1.9689074419816768e-07 remat_accepted=None
+[llama | eager+ac2]
+   peak=751.3MB step=507.2ms compile=1s grad_err=1.9258886603683193e-07 remat_accepted=None
+[llama | eager+sac_tt]
+   peak=574.3MB step=515.0ms compile=1s grad_err=1.935577384854391e-07 remat_accepted=None
+[llama | stock@1.0]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W1004 16:01:32.001000 50297 .venv-cuda/lib/python3.12/site-packages/torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+   peak=1109.9MB step=711.1ms compile=72s grad_err=3.334099347156032e-07 remat_accepted=None
+[llama | ac1]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=163.7MB step=848.3ms compile=86s grad_err=3.33351910313623e-07 remat_accepted=None
+[llama | ac2]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=615.7MB step=788.9ms compile=86s grad_err=3.3341095414178986e-07 remat_accepted=None
+[llama | sac_tt]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W1004 16:06:17.786000 50297 .venv-cuda/lib/python3.12/site-packages/torch/_logging/_internal.py:1394] [0/0] 
+W1004 16:06:17.786000 50297 .venv-cuda/lib/python3.12/site-packages/torch/_logging/_internal.py:1394] [0/0] Detected that context_fn is passed to torch.utils.checkpoint under torch.compile.
+W1004 16:06:17.786000 50297 .venv-cuda/lib/python3.12/site-packages/torch/_logging/_internal.py:1394] [0/0] Please make sure the checkpointed region does not contain in-place ops (e.g. torch.relu_).
+W1004 16:06:17.786000 50297 .venv-cuda/lib/python3.12/site-packages/torch/_logging/_internal.py:1394] [0/0] 
+   peak=577.9MB step=742.7ms compile=86s grad_err=3.3335526448541054e-07 remat_accepted=None
+[llama | sac_mm]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=862.7MB step=715.9ms compile=86s grad_err=3.304070387350535e-07 remat_accepted=None
+[llama | ac1+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=160.1MB step=848.3ms compile=96s grad_err=3.3341101661348823e-07 remat_accepted=32
+[llama | ac1+remat(all)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=166.2MB step=860.3ms compile=106s grad_err=3.334098580455411e-07 remat_accepted=75
+[llama | stock@0.13]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=363.3MB step=775.8ms compile=140s grad_err=3.3341077223478796e-07 remat_accepted=None
+[llama | stock+remat(all)@0.10]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=336.0MB step=825.8ms compile=160s grad_err=3.333528372172153e-07 remat_accepted=115
+[llama | stock+remat(all)@0.05]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=291.7MB step=912.9ms compile=184s grad_err=3.334095141022945e-07 remat_accepted=282
+[bert | eager]
+   peak=866.9MB step=365.7ms compile=0s grad_err=None remat_accepted=None
+[bert | eager+ac1]
+   peak=87.8MB step=448.8ms compile=0s grad_err=None remat_accepted=None
+[bert | eager+ac2]
+   peak=466.4MB step=409.2ms compile=0s grad_err=None remat_accepted=None
+[bert | eager+sac_tt]
+   peak=438.3MB step=419.8ms compile=0s grad_err=None remat_accepted=None
+[bert | stock@1.0]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=2679.1MB step=273.4ms compile=123s grad_err=None remat_accepted=None
+[bert | ac1]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=203.7MB step=382.5ms compile=135s grad_err=None remat_accepted=None
+[bert | ac2]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1407.4MB step=336.5ms compile=132s grad_err=None remat_accepted=None
+[bert | sac_tt]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=535.8MB step=331.1ms compile=131s grad_err=None remat_accepted=None
+[bert | sac_mm]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=1451.3MB step=289.5ms compile=128s grad_err=None remat_accepted=None
+[bert | ac1+remat(pw)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=203.7MB step=382.1ms compile=136s grad_err=None remat_accepted=1
+[bert | ac1+remat(all)]
+<repo>/.venv-cuda/lib/python3.12/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+   peak=203.7MB step=376.7ms compile=140s grad_err=None remat_accepted=1
+
+| model | config | peak MB | step ms | compile s | grad rel err |
+|---|---|---|---|---|---|
+| llama | eager | 1421.2 | 442 | 4 | 0.0e+00 |
+| llama | eager+ac1 | 122.3 | 562 | 1 | 2.0e-07 |
+| llama | eager+ac2 | 751.3 | 507 | 1 | 1.9e-07 |
+| llama | eager+sac_tt | 574.3 | 515 | 1 | 1.9e-07 |
+| llama | stock@1.0 | 1109.9 | 711 | 72 | 3.3e-07 |
+| llama | ac1 | 163.7 | 848 | 86 | 3.3e-07 |
+| llama | ac2 | 615.7 | 789 | 86 | 3.3e-07 |
+| llama | sac_tt | 577.9 | 743 | 86 | 3.3e-07 |
+| llama | sac_mm | 862.7 | 716 | 86 | 3.3e-07 |
+| llama | ac1+remat(pw) | 160.1 | 848 | 96 | 3.3e-07 |
+| llama | ac1+remat(all) | 166.2 | 860 | 106 | 3.3e-07 |
+| llama | stock@0.13 | 363.3 | 776 | 140 | 3.3e-07 |
+| llama | stock+remat(all)@0.10 | 336.0 | 826 | 160 | 3.3e-07 |
+| llama | stock+remat(all)@0.05 | 291.7 | 913 | 184 | 3.3e-07 |
+| bert | eager | 866.9 | 366 | 0 | - |
+| bert | eager+ac1 | 87.8 | 449 | 0 | - |
+| bert | eager+ac2 | 466.4 | 409 | 0 | - |
+| bert | eager+sac_tt | 438.3 | 420 | 0 | - |
+| bert | stock@1.0 | 2679.1 | 273 | 123 | - |
+| bert | ac1 | 203.7 | 383 | 135 | - |
+| bert | ac2 | 1407.4 | 336 | 132 | - |
+| bert | sac_tt | 535.8 | 331 | 131 | - |
+| bert | sac_mm | 1451.3 | 289 | 128 | - |
+| bert | ac1+remat(pw) | 203.7 | 382 | 136 | - |
+| bert | ac1+remat(all) | 203.7 | 377 | 140 | - |
+wrote experiments/liveness/results/ac_baselines.json
+=== 16:40 ac_baselines exit 0
