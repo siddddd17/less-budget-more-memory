@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the preprint below."
+title: "Less Budget, More Memory: code and raw results"
+authors:
+  - family-names: Ajith
+    given-names: Siddharth
+    orcid: "https://orcid.org/0009-0006-6454-7015"
+repository-code: "https://github.com/siddddd17/less-budget-more-memory"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Less Budget, More Memory: Diagnosing and Mitigating Non-Monotonic Activation Memory in PyTorch's Memory-Budget Partitioner"
+  authors:
+    - family-names: Ajith
+      given-names: Siddharth
+      orcid: "https://orcid.org/0009-0006-6454-7015"
+  year: 2026
+  publisher:
+    name: Zenodo
+  doi: "10.5281/zenodo.23161242"
+  url: "https://doi.org/10.5281/zenodo.23161242"
+  notes: "Preprint"

@@ -1,9 +1,11 @@
 # Less Budget, More Memory
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23161242.svg)](https://doi.org/10.5281/zenodo.23161242)
+
 Code, raw results and paper source for:
 
 > **Less Budget, More Memory: Diagnosing and Mitigating Non-Monotonic Activation Memory in PyTorch's Memory-Budget Partitioner**
-> Siddharth Ajith, 2026. arXiv: *(link once posted)*
+> Siddharth Ajith, 2026. Preprint, Zenodo, [doi:10.5281/zenodo.23161242](https://doi.org/10.5281/zenodo.23161242). arXiv: *(link once posted)*
 
 PyTorch's `torch._functorch.config.activation_memory_budget` trades recomputation for memory under `torch.compile`. We show that peak memory is **not monotone** in this budget (PyTorch issue [#197838](https://github.com/pytorch/pytorch/issues/197838), filed by the author), explain why, and evaluate two fixes:
 
@@ -165,6 +167,24 @@ On the small CPU model the solver keeps the stock plan. So `check_solver_bert.py
 
 - PyTorch issue [#197838](https://github.com/pytorch/pytorch/issues/197838): the non-monotonic budget curve.
 - PyTorch issue [#190758](https://github.com/pytorch/pytorch/issues/190758) and draft PRs [#190759](https://github.com/pytorch/pytorch/pull/190759) and [#191684](https://github.com/pytorch/pytorch/pull/191684): RNG recomputation under the memory budget.
+
+## Citation
+
+If you use this work, please cite the preprint:
+
+```bibtex
+@misc{ajith2026lessbudget,
+  title     = {Less Budget, More Memory: Diagnosing and Mitigating Non-Monotonic Activation Memory in {PyTorch}'s Memory-Budget Partitioner},
+  author    = {Ajith, Siddharth},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23161242},
+  url       = {https://doi.org/10.5281/zenodo.23161242},
+  note      = {Preprint}
+}
+```
+
+GitHub's "Cite this repository" button uses `CITATION.cff`.
 
 ## License
 
