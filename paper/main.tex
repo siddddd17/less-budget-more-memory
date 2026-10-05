@@ -43,10 +43,11 @@ Inductor's own memory estimator ranks all 14 plans we test in the same order as 
 the partitioner's in-tree evaluator does not.
 We then evaluate a post-partition, use-site rematerialization pass in the style of XLA's, which recomputes cheap values
 again near their late uses and leaves the saved set unchanged. At the same budget it reduces Llama's Inductor peak by
-17--28\% at no measurable step-time cost, removing about half of the excess; a variant that also duplicates matrix
-multiplies goes 7.5--20\% below the best stock budget on a dense grid of budgets, for 6--18\% more step time, and makes
-the budget curve monotone over the budgets we tested (0.05--0.30). On BERT the excess is held dropout masks, which the pass does not
-regenerate because it never duplicates random operations, so its effect there is small (0--3\%). Gradients of the rematerialization pass are checked against eager execution (Llama, every budget) or an unbudgeted run (BERT).
+17--28\% with step-time changes within run-to-run noise, removing about half of the excess, but it stays above the best
+stock budget. On Llama, a variant that also duplicates matrix multiplies goes 7.5--20\% below the best stock budget on a
+dense grid of budgets, for 6--18\% more step time, and makes the budget curve monotone over the budgets we tested
+(0.05--0.30); manual per-layer activation checkpointing reaches a lower peak still (164\,MB). On BERT the excess is held dropout masks, which the pass does not regenerate because it never duplicates
+random operations: light rematerialization changes its peak by only 0--3\%, and the all-ops variant raises it by up to 6\%. Gradients of the rematerialization pass are checked against eager execution (Llama, every budget) or an unbudgeted run (BERT).
 We also reproduce a known bug in which recomputed dropout silently corrupts gradients under a memory budget, measure
 the memory cost of its proposed fix, and find that, with that fix applied, the partitioner can trigger a second,
 CUDA-specific random-number bug in Inductor (PyTorch issue \#198333). All results come from one consumer GPU, two small models and fp32.
@@ -100,7 +101,7 @@ when the backend executes them as emitted, but under Inductor it only nearly pre
 \item \textbf{Use-site rematerialization for AOTAutograd} (\cref{sec:remat,sec:eval}). A post-partition pass that
 recomputes a value again near its late use, as XLA's rematerialization pass does~\citep{xlaremat}. It preserves the
 saved set exactly. On Llama it removes about half of the excess at the same budget, and its all-ops variant goes below
-the best stock budget; on BERT, whose excess is held dropout masks, it has little effect because it never duplicates
+the best stock budget, though not below per-layer activation checkpointing (\cref{sec:eval}); on BERT, whose excess is held dropout masks, it has little effect because it never duplicates
 random operations.
 \item \textbf{Measurement practice} (\cref{sec:correctness}). Gradient checks that caught two pitfalls of our own
 benchmark (a loss that is zero by construction, and dropout state), with controls that show the checks can fail.
@@ -423,8 +424,9 @@ rows that use it are excluded from all claims.}
 \begin{table}[t]
 \centering
 \small
-\caption{Under Inductor: every plan we measured whose peak is at or below the best stock plan, and not worse than
-another plan in both peak and step time. $\Delta$ is relative to the best stock plan among the stock rows of
+\caption{Under Inductor: every budget-based plan we measured whose peak is at or below the best stock plan, and not
+worse than another such plan in both peak and step time (per-layer activation checkpointing, \cref{sec:eval}, is lower
+still and dominates the Llama all-ops 0.05 row). $\Delta$ is relative to the best stock plan among the stock rows of
 \cref{tab:main} and the dense stock grid (Llama: budget 0.13; BERT: 0.05; peaks measured in separate processes agree to
 within 1.5\,MB). Step-time differences below about 1\% (Llama) and 2--3\% (BERT) are within run-to-run
 variation.}
@@ -478,8 +480,21 @@ the best stock plan, taken over the dense grid. On Llama, light rematerializatio
 0.13): it removes part of the anomaly but does not beat tuning the knob. The all-ops variant does, at a price: $-$7.5\%
 peak for $+$6.4\% step time at budget 0.10, and $-$19.7\% for $+$17.7\% at 0.05. The selection solver's lowest plan
 (367\,MB at budget 0.15) is 1\% above the best stock plan. On BERT no method we measured goes meaningfully below the best
-stock plan (light rematerialization at 0.05: $-0.3\%$). On these models, all-ops rematerialization is the only method that
-extends the memory floor, at an explicit compute cost.
+stock plan (light rematerialization at 0.05: $-0.3\%$). Among budget-based plans on these models, all-ops rematerialization is the only one
+that extends the memory floor, at an explicit compute cost.
+
+\paragraph{Manual checkpointing.} Per-layer activation checkpointing is stronger still. Wrapping every layer in
+\code{torch.utils.checkpoint} (non-reentrant) and compiling at budget 1.0 gives 164\,MB at 848\,ms on Llama, 44\% below
+the all-ops pass at budget 0.05 (292\,MB, 913\,ms in the same run) and faster, and 204\,MB on BERT, against 475\,MB for the best stock
+budget (BERT gradients were not checked for this baseline). Coarser policies are much weaker: checkpointing every second
+layer gives 616\,MB on Llama, and torchtitan's selective policy~\citep{liang2025torchtitan} (save attention and every
+other matrix multiply) 578\,MB, both above the best stock budget (363\,MB). Adding the use-site
+pass to per-layer checkpointing changes the peak by at most 2.2\% on Llama and by less than 0.01\% on BERT, since each layer is
+already recomputed next to its use. Without compilation, per-layer checkpointing reaches 122\,MB at 562\,ms on Llama; on
+this GPU the eager Llama step is faster than the compiled one (442 vs.\ 711\,ms without checkpointing). The memory budget and our pass are therefore
+not competitive with per-layer checkpointing on these models. What they offer is a single-scalar trade-off inside
+\code{torch.compile} with no change to the model code, and all-ops rematerialization at budget 0.10 (336\,MB, 826\,ms) lies
+on the compiled Pareto front between the best stock budget and per-layer checkpointing.
 
 \subsection{Compile-time overhead}
 \Cref{tab:pass} lists the work done by the pass. Our prototype re-walks the whole backward after every accepted change;
@@ -627,11 +642,12 @@ differ from the original, and we have not run it on our GPU setup.
 \label{sec:limits}
 \begin{itemize}
 \item \textbf{Scale.} One 4\,GB consumer GPU, fp32, two small model families, no optimizer step. Whether the anomaly and the
-gains persist at 1--8B parameters, in bf16 and on data-center GPUs is untested. The selection limitation appears only when
-$2S/I>1$ (\cref{tab:regime}); that sweep varies $S$ and $I$ on the 32-layer, hidden-256 model only.
+gains persist at 1--8B parameters, in bf16 and on data-center GPUs is untested. In our sweep the selection limitation appears only at
+$2S/I\geq1.49$, not at 0.74, and no ratio in between was tested (\cref{tab:regime}); that sweep varies $S$ and $I$ on the 32-layer, hidden-256 model only.
 \item \textbf{End-to-end metric.} We report peak memory and step time, not the largest batch or sequence that fits.
-\item \textbf{Baselines.} We compare against stock at the same and at the best budget, but not against optimal plans
-(Checkmate or Moccasin on small graphs), manual checkpointing policies, or absolute-budget planners.
+\item \textbf{Baselines.} We compare against stock at the same and at the best budget and against per-layer and selective
+activation checkpointing (\cref{sec:eval}); per-layer checkpointing reaches a lower peak than every budget-based plan
+here. We do not compare against optimal plans (Checkmate or Moccasin on small graphs) or absolute-budget planners.
 \item \textbf{Oracle under Inductor.} Our prototypes use the fx walk as their oracle even under Inductor, where it only nearly
 preserves the ranking of plans and overstates the pass's savings 1.3--2.2$\times$ at budgets 0.05 and 0.10 (\cref{sec:remat}). Inductor's own
 estimator, which predicts the effect of the pass's edits within 6\,MB, would be the better choice.
